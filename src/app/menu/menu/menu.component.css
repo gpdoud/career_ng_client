@@ -1,0 +1,33 @@
+.left, .right {
+    display: inline-block;
+    background-color: #454545;
+    color: silver;
+}
+.left {
+    width: 70%;
+}
+.right {
+    width: 30%;
+    padding-right: 15px;
+    text-align: right;
+}
+nav {
+    background-color: #454545;
+}
+ul {
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+li {
+    display: inline-block;
+}
+a {
+    color: silver;
+    text-decoration: none;
+    padding: 0 15px;
+    cursor: pointer;
+}
+a:hover {
+    color: white;
+    background-color: black;
+}

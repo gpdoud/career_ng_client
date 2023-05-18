@@ -1,0 +1,14 @@
+<div>
+    <div class="left">
+        <nav>
+            <ul>
+                <li *ngFor="let m of menus">
+                    <a routerLink="{{ m.route }}">{{ m.display }}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="right">
+        <span>LASTNAME</span>
+    </div>
+</div>
