@@ -2,3 +2,6 @@
 input, select {
     border-radius: 7px;
 }
+a {
+    text-decoration: none;
+}
