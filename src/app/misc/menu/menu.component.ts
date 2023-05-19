@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Menu } from '../menu.class';
+import { Menu } from './menu.class';
 
 @Component({
   selector: 'app-menu',
@@ -9,9 +9,7 @@ import { Menu } from '../menu.class';
 export class MenuComponent {
 
   menus: Menu[] = [
-    new Menu("Test", ""),
     new Menu("User", "/user/list"),
-    new Menu("Test", "")
   ];
   
 }
