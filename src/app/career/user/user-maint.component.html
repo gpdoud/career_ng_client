@@ -1,0 +1,68 @@
+<div>
+    <app-menu></app-menu>
+    
+    <header>
+        <span class="page-title">User Create</span>
+    </header>
+
+    <main>
+        <form>
+            <table class="table table-striped table-sm" *ngIf="user">
+                <tbody>
+                    <tr>
+                        <td>Id:</td>
+                        <td><input [ngModel]="user.id" name="id" readonly ></td>
+                    </tr>
+                    <tr>
+                        <td>Last name:</td>
+                        <td><input [(ngModel)]="user.lastname" name="lastname" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>First name:</td>
+                        <td><input [(ngModel)]="user.firstname" name="firstname" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td><input [(ngModel)]="user.email" name="email" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input [(ngModel)]="user.password" type="password" (blur)="encrypt()" name="password" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td><input [(ngModel)]="user.phone" name="phone" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Admin:</td>
+                        <td><input [(ngModel)]="user.admin" type="checkbox" name="admin" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Active:</td>
+                        <td><input [(ngModel)]="user.active" type="checkbox" name="active" [readonly]="readonly"></td>
+                    </tr>
+                    <tr *ngIf="!readonly">
+                        <td colspan="2">
+                            <button (click)="save()" class="btn btn-primary">Save</button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="readonly">
+                        <td colspan="2">
+                            <a routerLink="/user/change/{{ user.id }}" class="btn btn-warning">Edit</a>
+                            <span> | </span>
+                            <a (click)="toggleVerifyDelete()" class="btn btn-danger">Delete</a>
+                            <span *ngIf="verifyDelete">
+                                <span> | </span>
+                                <a (click)="remove()" class="btn btn-danger">VerifyDelete</a>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+        <span>Career Management System (CMS)</span>
+    </footer>
+</div>

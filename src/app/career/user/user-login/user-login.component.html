@@ -1,0 +1,22 @@
+<div>
+    <form>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>Email:</td>
+                    <td><input [(ngModel)]="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input [(ngModel)]="password" (blur)="encrypt()" type="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="fw-bold text-daanger">{{ message }}&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button (click)="login()" class="btn btn-primary">Login</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
