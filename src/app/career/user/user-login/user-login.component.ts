@@ -13,7 +13,7 @@ export class UserLoginComponent {
   email: string = '';
   password: string = '';
   encryptedPassword: string = '';
-  message: string = 'Not found';
+  message: string = '';
 
   get passwordEncrypted() { return encrypt(this.password); }
 
@@ -28,12 +28,20 @@ export class UserLoginComponent {
   }
 
   login(): void {
+    this.message = '';
+    this.encrypt();
     this.usrsvc.login(this.email, this.encryptedPassword).subscribe({
       next: (res) => {
         console.debug("Login successful!");
         this.router.navigateByUrl("/user/list");
       },
-      error: (err) => console.error(err)
+      error: (err) =>  {
+        if(err.status === 404) {
+          this.message = "404 - Not Found";
+        } else {
+          console.error(err); 
+        }
+      }
     });
   }
 

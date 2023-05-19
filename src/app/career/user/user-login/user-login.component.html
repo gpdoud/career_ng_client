@@ -1,17 +1,23 @@
 <div>
     <form>
-        <table class="table table-sm">
+        <table class="table table-sm table-borderless">
             <tbody>
+                <tr>
+                    <td colspan="2" class="fw-bold h4">Career Login</td>
+                </tr>
+                <tr>
+                    <td colspan="2">&nbsp;</td>
+                </tr>
                 <tr>
                     <td>Email:</td>
                     <td><input [(ngModel)]="email" name="email"></td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td><input [(ngModel)]="password" (blur)="encrypt()" type="password" name="password"></td>
+                    <td><input [(ngModel)]="password" type="password" name="password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="fw-bold text-daanger">{{ message }}&nbsp;</td>
+                    <td colspan="2" class="fw-bold text-danger h3">{{ message }}&nbsp;</td>
                 </tr>
                 <tr>
                     <td colspan="2"><button (click)="login()" class="btn btn-primary">Login</button></td>

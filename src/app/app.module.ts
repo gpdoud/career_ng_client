@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as x from './career/index.exports';
 import { RouterModule } from '@angular/router';
+import { UserSearchPipe } from './career/user/user-search.pipe';
+import { SortPipe } from './misc/pipes/sort.pipe';
 
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
@@ -17,7 +19,9 @@ export const startupServiceFactory = (appinit: AppInitService) => {
   declarations: [
     x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,x.UserCreateComponent,x.UserChangeComponent,
     x.E404Component, x.BoolDisplayPipe,x.MenuComponent,
-    AppComponent
+    AppComponent,
+    UserSearchPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,

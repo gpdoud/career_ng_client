@@ -9,14 +9,22 @@ import { UserService } from '../user.service';
 })
 export class UserListComponent {
 
-  users?: User[];
+  users!: User[];
 
   constructor(
     private usrsvc: UserService
   ) {}
 
+  searchColumn: string = ''
+  sortColumn: string = 'id'
+  sortAsc: boolean = true;
   sortCol(col: string): void {
-    
+    if(this.sortColumn === col) {
+      this.sortAsc = !this.sortAsc;
+      return;
+    }
+    this.sortColumn = col;
+    this.sortAsc = true;
   }
 
   ngOnInit(): void {
