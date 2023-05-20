@@ -6,7 +6,9 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class SortPipe implements PipeTransform {
 
   transform(arr: any[], col: string = 'id', asc: boolean = true): any[] {
-    
+    if(typeof arr === "undefined") {
+      return arr;
+    }
     return arr.sort(sortFn);
 
     function sortFn(a: any, b: any): number {
