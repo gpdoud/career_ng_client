@@ -20,11 +20,15 @@ export class UserChangeComponent {
   ) {}
 
   encrypt(): void {
-    this.user.password = encrypt(this.user.password);
+    if(this.user.password.length !== 64) {
+      // prefix encrypted password with "sha64-"
+      this.user.password = encrypt(this.user.password);
+    }
   }
 
   save(): void {
     console.debug("B4:", this.user);
+    this.encrypt();
     this.usrsvc.change(this.user).subscribe({
       next: (res) => {
         console.debug("User Changed!");

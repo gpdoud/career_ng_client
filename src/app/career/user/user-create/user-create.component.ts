@@ -25,6 +25,7 @@ export class UserCreateComponent {
 
   save(): void {
     console.debug("B4:", this.user);
+    this.encrypt();
     this.usrsvc.create(this.user).subscribe({
       next: (res) => {
         console.debug("User Created!");
