@@ -23,7 +23,7 @@ export class UserLoginComponent {
   ) {}
 
   encrypt(): void {
-    this.encryptedPassword = encrypt(this.password);
+    this.encryptedPassword = this.usrsvc.encryptString(this.password);
     this.password = "******************";
   }
 

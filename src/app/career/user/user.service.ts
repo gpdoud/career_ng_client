@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './user.class';
+import { encrypt } from 'dsi-encrypt-password';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,15 @@ export class UserService {
 
   baseurl = 'http://localhost:5555';
   url = `${this.baseurl}/api/users`;
+
+  encryptString(str: string): string {
+    // encrypt a string if not already encrypted
+    if(!str.startsWith("sha256-")) {
+      return `sha256-${encrypt(str)}`;
+    } 
+    // otherwise return original string
+    return str;
+  }
 
   constructor(
     private http: HttpClient

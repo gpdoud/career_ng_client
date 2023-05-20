@@ -20,10 +20,7 @@ export class UserChangeComponent {
   ) {}
 
   encrypt(): void {
-    if(this.user.password.length !== 64) {
-      // prefix encrypted password with "sha64-"
-      this.user.password = encrypt(this.user.password);
-    }
+    this.user.password = this.usrsvc.encryptString(this.user.password);
   }
 
   save(): void {

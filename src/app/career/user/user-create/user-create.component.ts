@@ -20,7 +20,7 @@ export class UserCreateComponent {
   ) {}
 
   encrypt(): void {
-    this.user.password = encrypt(this.user.password);
+    this.user.password = this.usrsvc.encryptString(this.user.password);
   }
 
   save(): void {
