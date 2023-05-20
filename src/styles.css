@@ -10,7 +10,11 @@ input, select {
     border-radius: 7px;
 }
 a {
-    color: #0d6efd !important;
     text-decoration: none;
     cursor: pointer;
+    font-weight: bold;
+}
+.sort-headers a {
+    color: #0d6efd !important;
+
 }
