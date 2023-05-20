@@ -3,6 +3,7 @@ import { User } from '../user.class';
 import { UserService } from '../user.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { encrypt } from 'dsi-encrypt-password';
+import { SystemService } from 'src/app/misc/services/system.service';
 
 @Component({
   selector: 'app-user-change',
@@ -12,8 +13,10 @@ import { encrypt } from 'dsi-encrypt-password';
 export class UserChangeComponent {
   readonly: boolean = false;
   user!: User;
+  get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
+    private sys: SystemService,
     private usrsvc: UserService,
     private route: ActivatedRoute,
     private router: Router

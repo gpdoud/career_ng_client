@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
+import { SystemService } from 'src/app/misc/services/system.service';
 
 @Component({
   selector: 'app-user-list',
@@ -10,8 +11,10 @@ import { UserService } from '../user.service';
 export class UserListComponent {
 
   users!: User[];
+  get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
+    private sys: SystemService,
     private usrsvc: UserService
   ) {}
 
@@ -28,6 +31,7 @@ export class UserListComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin();
     this.usrsvc.list().subscribe({
       next: (res) => {
         console.debug("Users", res);

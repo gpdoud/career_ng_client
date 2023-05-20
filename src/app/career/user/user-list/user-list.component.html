@@ -3,8 +3,10 @@
 
     <header>
         <span class="page-title">User List</span>
-        <span> | </span>
-        <a routerLink="/user/create">Create New</a>
+        <span *ngIf="userIsAdmin">
+            <span> | </span>
+            <a routerLink="/user/create">Create New</a>
+        </span>
         <span> | </span>
         <input [(ngModel)]="searchColumn" placeholder="Search">
     </header>
@@ -34,8 +36,10 @@
                     <td>{{ u.active | boolDisplay }}</td>
                     <td>
                         <a routerLink="/user/detail/{{ u.id }}">Det</a>
-                        <span> | </span>
-                        <a routerLink="/user/change/{{ u.id }}">Chg</a>
+                        <span *ngIf="userIsAdmin">
+                            <span> | </span>
+                            <a routerLink="/user/change/{{ u.id }}">Chg</a>
+                        </span>
                     </td>
                 </tr>
             </tbody>

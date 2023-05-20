@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from './user.class';
 import { encrypt } from 'dsi-encrypt-password';
+import { SystemService } from 'src/app/misc/services/system.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import { encrypt } from 'dsi-encrypt-password';
 export class UserService {
 
   baseurl = 'http://localhost:5555';
-  url = `${this.baseurl}/api/users`;
+  get url() { return `${this.sys.config.baseurl}/api/users`; }
 
   encryptString(str: string): string {
     // encrypt a string if not already encrypted
@@ -22,6 +23,7 @@ export class UserService {
   }
 
   constructor(
+    private sys: SystemService,
     private http: HttpClient
   ) { }
 

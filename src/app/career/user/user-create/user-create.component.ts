@@ -3,6 +3,7 @@ import { User } from '../user.class';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
 import { encrypt } from 'dsi-encrypt-password';
+import { SystemService } from 'src/app/misc/services/system.service';
 
 @Component({
   selector: 'app-user-create',
@@ -12,9 +13,10 @@ import { encrypt } from 'dsi-encrypt-password';
 export class UserCreateComponent {
   readonly: boolean = false;
   user: User = new User();
-
+  get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
+    private sys: SystemService,
     private usrsvc: UserService,
     private router: Router
   ) {}

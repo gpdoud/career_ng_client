@@ -6,9 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class AppInitService {
 
-  get Url() { return this.config.baseurl; }
-
   config: any;
+
   getSettings(): Promise<any> {
     console.log("Calling getSettings()");
     return this.http.get("./assets/config.json").toPromise().then(

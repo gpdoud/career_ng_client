@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../user.class';
 import { UserService } from '../user.service';
+import { SystemService } from 'src/app/misc/services/system.service';
 
 @Component({
   selector: 'app-user-detail',
@@ -12,8 +13,10 @@ export class UserDetailComponent {
   readonly: boolean = true;
   verifyDelete: boolean = false;
   user!: User;
+  get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
+    private sys: SystemService,
     private usrsvc: UserService,
     private route: ActivatedRoute,
     private router: Router
