@@ -16,5 +16,7 @@ a {
 }
 .sort-headers a {
     color: #0d6efd !important;
-
+}
+.no-borders {
+    border-width: 0;
 }

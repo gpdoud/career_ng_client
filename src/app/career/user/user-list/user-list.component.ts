@@ -10,6 +10,8 @@ import { SystemService } from 'src/app/misc/services/system.service';
 })
 export class UserListComponent {
 
+  pageTitle = "User List";
+  createRouterLink = "/user/list";
   users!: User[];
   get userIsAdmin() { return this.sys.isAdmin; }
 

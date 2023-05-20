@@ -2,13 +2,12 @@
     <app-menu></app-menu>
 
     <header>
-        <span class="page-title">User List</span>
-        <span *ngIf="userIsAdmin">
-            <span> | </span>
-            <a routerLink="/user/create">Create New</a>
-        </span>
+        <app-header 
+            [pageTitle]="pageTitle"
+            [routerLink]="createRouterLink">
+            </app-header>
         <span> | </span>
-        <input [(ngModel)]="searchColumn" placeholder="Search">
+        <input [(ngModel)]="searchColumn" class="no-borders" placeholder="Search">
     </header>
 
     <main>
@@ -47,6 +46,6 @@
     </main>
 
     <footer>
-
+        <app-footer></app-footer>
     </footer>
 </div>

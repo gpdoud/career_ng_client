@@ -10,6 +10,8 @@ import * as x from './career/index.exports';
 import { RouterModule } from '@angular/router';
 import { UserSearchPipe } from './career/user/user-search.pipe';
 import { SortPipe } from './misc/pipes/sort.pipe';
+import { HeaderComponent } from './misc/components/header/header.component';
+import { FooterComponent } from './misc/components/footer/footer.component';
 
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
@@ -21,7 +23,9 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.E404Component, x.BoolDisplayPipe,x.MenuComponent,
     AppComponent,
     UserSearchPipe,
-    SortPipe
+    SortPipe,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,
