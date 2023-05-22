@@ -20,6 +20,7 @@ export class FooterComponent {
   get release() {
     return this.sys.releaseDate;
   }
+  get state() { return this.sys.state; }
 
   constructor(
     private sys: SystemService

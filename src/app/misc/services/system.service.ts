@@ -14,6 +14,7 @@ export class SystemService {
   minor: number = 1;
   patch: number = 0;
   releaseDate = "May 22, 2023"
+  state: string = "DEV";
 
   get version() { 
     let ver =  `${this.major}.${this.minor}`;
