@@ -1,14 +1,12 @@
 <div>
+    <app-header></app-header>
+    
     <app-menu></app-menu>
 
-    <header>
-        <app-header 
-            [pageTitle]="pageTitle"
-            [routerLink]="createRouterLink">
-            </app-header>
-        <span> | </span>
-        <input [(ngModel)]="searchColumn" class="no-borders" placeholder="Search">
-    </header>
+    <app-page-title [pageTitle]="pageTitle" [routerLink]="createRouterLink">
+    </app-page-title>
+    <span> | </span>
+    <input [(ngModel)]="searchColumn" class="no-borders" placeholder="Search">
 
     <main>
         <table class="table table-striped table-sm">

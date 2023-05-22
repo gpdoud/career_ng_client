@@ -8,6 +8,21 @@ import { User } from 'src/app/career/user/user.class';
 })
 export class SystemService {
 
+  productName = "Career Management System";
+  author = "Annette Ballard & Greg Doud";
+  major: number = 0;
+  minor: number = 1;
+  patch: number = 0;
+  releaseDate = "May 22, 2023"
+
+  get version() { 
+    let ver =  `${this.major}.${this.minor}`;
+    if(this.patch !== 0) {
+      ver += `.${this.patch}`;
+    }
+    return ver;
+  }
+
   get config() { return this.init.config; };
 
   loggedInUser: User | null = null;

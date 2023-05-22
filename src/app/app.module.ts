@@ -12,6 +12,7 @@ import { UserSearchPipe } from './career/user/user-search.pipe';
 import { SortPipe } from './misc/pipes/sort.pipe';
 import { HeaderComponent } from './misc/components/header/header.component';
 import { FooterComponent } from './misc/components/footer/footer.component';
+import { PageTitleComponent } from './misc/components/page-title/page-title.component';
 
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
@@ -25,7 +26,8 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     UserSearchPipe,
     SortPipe,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PageTitleComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,

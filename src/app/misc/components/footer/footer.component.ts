@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SystemService } from '../../services/system.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,18 +8,21 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  productName: string = "Career Management System";
-  author: string = "Greg Doud";
-  releaseDate: string = "May 20, 2023"
-  majorVersion = 0;
-  minorVersion = 1;
-  patchVersion = 0;
+  get productName() { return this.sys.productName; }
+  get author() { return this.sys.author; }
   get version() {
-    let ver = `${this.majorVersion}.${this.minorVersion}`;
-    if(this.patchVersion !== 0) {
-      ver = `${ver}.${this.patchVersion}`;
+    let ver = `${this.sys.major}.${this.sys.minor}`;
+    if(this.sys.patch !== 0) {
+      ver = `${ver}.${this.sys.patch}`;
     }
     return ver;
   }
+  get release() {
+    return this.sys.releaseDate;
+  }
+
+  constructor(
+    private sys: SystemService
+  ) {}
 
 }

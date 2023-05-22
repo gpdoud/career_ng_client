@@ -10,6 +10,7 @@ import { SystemService } from 'src/app/misc/services/system.service';
   styleUrls: ['../user-maint.component.css']
 })
 export class UserDetailComponent {
+  pageTitle = "User Detail";
   readonly: boolean = true;
   verifyDelete: boolean = false;
   user!: User;

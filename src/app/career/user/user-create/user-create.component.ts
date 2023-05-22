@@ -11,6 +11,7 @@ import { SystemService } from 'src/app/misc/services/system.service';
   styleUrls: ['../user-maint.component.css']
 })
 export class UserCreateComponent {
+  pageTitle = "User Create";
   readonly: boolean = false;
   user: User = new User();
   get userIsAdmin() { return this.sys.isAdmin; }
