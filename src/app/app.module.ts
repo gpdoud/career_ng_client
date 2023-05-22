@@ -14,6 +14,8 @@ import { HeaderComponent } from './misc/components/header/header.component';
 import { FooterComponent } from './misc/components/footer/footer.component';
 import { PageTitleComponent } from './misc/components/page-title/page-title.component';
 
+
+
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
@@ -27,7 +29,8 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     SortPipe,
     HeaderComponent,
     FooterComponent,
-    PageTitleComponent
+    PageTitleComponent,
+    x.HelpComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,

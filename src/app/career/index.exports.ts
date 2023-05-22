@@ -4,6 +4,7 @@ export { UserDetailComponent} from '../career/user/user-detail/user-detail.compo
 export { UserCreateComponent} from '../career/user/user-create/user-create.component';
 export { UserChangeComponent} from '../career/user/user-change/user-change.component';
 
+export { HelpComponent } from '../career/help/help.component';
 export { E404Component } from '../misc/e404/e404.component';
 
 export { MenuComponent } from '../misc/menu/menu.component';

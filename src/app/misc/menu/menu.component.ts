@@ -11,7 +11,8 @@ export class MenuComponent {
 
   menus: Menu[] = [
     new Menu("User", "/user/list"),
-    new Menu("Login", "/login"),
+    new Menu("Help", "/help"),
+    new Menu("Login", "/login")
   ];
   userDisplay: string = '[]';
 

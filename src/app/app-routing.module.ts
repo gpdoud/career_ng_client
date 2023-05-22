@@ -11,6 +11,8 @@ const routes: Routes = [
   { path: 'user/create', component: x.UserCreateComponent},
   { path: 'user/detail/:id', component: x.UserDetailComponent},
   { path: 'user/change/:id', component: x.UserChangeComponent},
+
+  { path: 'help', component: x.HelpComponent},
   
   { path: '**', component: x.E404Component}
 ];
