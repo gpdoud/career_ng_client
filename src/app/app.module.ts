@@ -14,14 +14,14 @@ import { HeaderComponent } from './misc/components/header/header.component';
 import { FooterComponent } from './misc/components/footer/footer.component';
 import { PageTitleComponent } from './misc/components/page-title/page-title.component';
 
-
-
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
 
 @NgModule({
   declarations: [
+    x.CustomerMasterListComponent, x.CustomerMasterDetailComponent,
+    x.CustomerMasterCreateComponent, x.CustomerMasterChangeComponent,
     x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,x.UserCreateComponent,x.UserChangeComponent,
     x.E404Component, x.BoolDisplayPipe,x.MenuComponent,
     AppComponent,
