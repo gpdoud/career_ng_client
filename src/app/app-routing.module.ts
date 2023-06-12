@@ -8,10 +8,10 @@ const routes: Routes = [
 
   { path: 'login', component: x.UserLoginComponent},
 
-  { path: 'customermaster/list', component: x.CustomerMasterListComponent},
-  { path: 'customermaster/create', component: x.CustomerMasterCreateComponent},
-  { path: 'customermaster/detail/:id', component: x.CustomerMasterDetailComponent},
-  { path: 'customermaster/change/:id', component: x.CustomerMasterChangeComponent},
+  { path: 'companymaster/list', component: x.CompanyMasterListComponent},
+  { path: 'companymaster/create', component: x.CompanyMasterCreateComponent},
+  { path: 'companymaster/detail/:id', component: x.CompanyMasterDetailComponent},
+  { path: 'companymaster/change/:id', component: x.CompanyMasterChangeComponent},
   
   { path: 'user/list', component: x.UserListComponent},
   { path: 'user/create', component: x.UserCreateComponent},

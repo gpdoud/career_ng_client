@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { SystemService } from 'src/app/misc/services/system.service';
-import { CustomerMaster } from '../customer-master.class';
-import { CustomerMasterService } from '../customer-master.service';
+import { CompanyMaster } from '../company-master.class';
+import { CompanyMasterService } from '../company-master.service';
 import { UserService } from '../../user/user.service';
 
 @Component({
   selector: 'app-customer-master-list',
-  templateUrl: './customer-master-list.component.html',
-  styleUrls: ['./customer-master-list.component.css']
+  templateUrl: './company-master-list.component.html',
+  styleUrls: ['./company-master-list.component.css']
 })
-export class CustomerMasterListComponent {
-  pageTitle = "CustomerMaster List";
-  createRouterLink = "/CustomerMaster/create";
-  customerMasters!: CustomerMaster[];
+export class CompanyMasterListComponent {
+  pageTitle = "CompanyMaster List";
+  createRouterLink = "/customermaster/create";
+  customerMasters!: CompanyMaster[];
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
     private sys: SystemService,
-    private cmsvc: CustomerMasterService,
+    private cmsvc: CompanyMasterService,
     private usrsvc: UserService
   ) {}
 
@@ -37,8 +37,8 @@ export class CustomerMasterListComponent {
     this.sys.chkLogin();
     this.cmsvc.list().subscribe({
       next: (res) => {
-        console.debug("CustomerMasters", res);
-        this.customerMasters = res as CustomerMaster[];
+        console.debug("CompanyMasters", res);
+        this.customerMasters = res as CompanyMaster[];
       },
       error: (err) => console.error(err)
     });

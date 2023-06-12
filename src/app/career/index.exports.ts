@@ -1,7 +1,9 @@
-export { CustomerMasterListComponent } from '../career/customer-master/customer-master-list/customer-master-list.component'
-export { CustomerMasterDetailComponent } from '../career/customer-master/customer-master-detail/customer-master-detail.component'
-export { CustomerMasterCreateComponent } from '../career/customer-master/customer-master-create/customer-master-create.component'
-export { CustomerMasterChangeComponent } from '../career/customer-master/customer-master-change/customer-master-change.component'
+export { CompanyMasterListComponent } from '../career/company-master/company-master-list/company-master-list.component'
+export { CompanyMasterDetailComponent } from '../career/company-master/company-master-detail/company-master-detail.component'
+export { CompanyMasterCreateComponent } from '../career/company-master/company-master-create/company-master-create.component'
+export { CompanyMasterChangeComponent } from '../career/company-master/company-master-change/company-master-change.component'
+export { CompanyMasterSearchPipe } from '../career/company-master/company-master-search.pipe';
+
 
 export { UserLoginComponent } from '../career/user/user-login/user-login.component';
 export { UserListComponent} from '../career/user/user-list/user-list.component';

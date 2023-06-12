@@ -1,4 +1,4 @@
-export class CustomerMaster {
+export class CompanyMaster {
     id: number = 0;
     code: string = '';
     name: string = '';

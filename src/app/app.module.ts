@@ -20,8 +20,10 @@ export const startupServiceFactory = (appinit: AppInitService) => {
 
 @NgModule({
   declarations: [
-    x.CustomerMasterListComponent, x.CustomerMasterDetailComponent,
-    x.CustomerMasterCreateComponent, x.CustomerMasterChangeComponent,
+    x.CompanyMasterListComponent, x.CompanyMasterDetailComponent,
+    x.CompanyMasterCreateComponent, x.CompanyMasterChangeComponent,
+    x.CompanyMasterSearchPipe,
+    
     x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,x.UserCreateComponent,x.UserChangeComponent,
     x.E404Component, x.BoolDisplayPipe,x.MenuComponent,
     AppComponent,
