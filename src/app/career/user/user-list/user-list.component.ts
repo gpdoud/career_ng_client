@@ -20,7 +20,7 @@ export class UserListComponent {
     private usrsvc: UserService
   ) {}
 
-  searchColumn: string = ''
+  searchCriteria: string = ''
   sortColumn: string = 'id'
   sortAsc: boolean = true;
   sortCol(col: string): void {

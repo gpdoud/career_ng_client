@@ -11,8 +11,8 @@ import { UserService } from '../../user/user.service';
 })
 export class CompanyMasterListComponent {
   pageTitle = "CompanyMaster List";
-  createRouterLink = "/customermaster/create";
-  customerMasters!: CompanyMaster[];
+  createRouterLink = "/companymaster/create";
+  companyMasters!: CompanyMaster[];
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -21,7 +21,7 @@ export class CompanyMasterListComponent {
     private usrsvc: UserService
   ) {}
 
-  searchColumn: string = ''
+  searchCriteria: string = ''
   sortColumn: string = 'id'
   sortAsc: boolean = true;
   sortCol(col: string): void {
@@ -38,7 +38,7 @@ export class CompanyMasterListComponent {
     this.cmsvc.list().subscribe({
       next: (res) => {
         console.debug("CompanyMasters", res);
-        this.customerMasters = res as CompanyMaster[];
+        this.companyMasters = res as CompanyMaster[];
       },
       error: (err) => console.error(err)
     });

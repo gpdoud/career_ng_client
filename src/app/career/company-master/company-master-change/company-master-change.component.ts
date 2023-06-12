@@ -29,7 +29,7 @@ export class CompanyMasterChangeComponent {
     this.cmsvc.change(this.companyMaster).subscribe({
       next: (res) => {
         console.debug("Company Master Changed!");
-        this.router.navigateByUrl("/customermaster/list");
+        this.router.navigateByUrl("/companymaster/list");
       },
       error: (err) => console.error(err)
     });

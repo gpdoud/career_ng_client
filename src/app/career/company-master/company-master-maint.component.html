@@ -60,23 +60,23 @@
                     </tr>
                     <tr>
                         <td>CodingRoles:</td>
-                        <td><input [(ngModel)]="companyMaster.codingRoles" type="checkbox" name="active" [readonly]="readonly"></td>
+                        <td><input [(ngModel)]="companyMaster.codingRoles" type="checkbox" name="codingRoles" [readonly]="readonly"></td>
                     </tr>
                     <tr>
                         <td>ItbaRoles:</td>
-                        <td><input [(ngModel)]="companyMaster.itbaRoles" type="checkbox" name="active" [readonly]="readonly"></td>
+                        <td><input [(ngModel)]="companyMaster.itbaRoles" type="checkbox" name="itbaRoles" [readonly]="readonly"></td>
                     </tr>
                     <tr>
                         <td>SecurityRoles:</td>
-                        <td><input [(ngModel)]="companyMaster.securityRoles" type="checkbox" name="active" [readonly]="readonly"></td>
+                        <td><input [(ngModel)]="companyMaster.securityRoles" type="checkbox" name="securityRoles" [readonly]="readonly"></td>
                     </tr>
                     <tr>
                         <td>BlendedRoles:</td>
-                        <td><input [(ngModel)]="companyMaster.blendedRoles" type="checkbox" name="active" [readonly]="readonly"></td>
+                        <td><input [(ngModel)]="companyMaster.blendedRoles" type="checkbox" name="blendedRoles" [readonly]="readonly"></td>
                     </tr>
                     <tr>
                         <td>VirtualRoles:</td>
-                        <td><input [(ngModel)]="companyMaster.virtualRoles" type="checkbox" name="active" [readonly]="readonly"></td>
+                        <td><input [(ngModel)]="companyMaster.virtualRoles" type="checkbox" name="virtualRoles" [readonly]="readonly"></td>
                     </tr>
                     <tr>
                         <td>Active:</td>
@@ -89,7 +89,7 @@
                     </tr>
                     <tr *ngIf="readonly && userIsAdmin">
                         <td colspan="2">
-                            <a routerLink="/customermaster/change/{{ companyMaster.id }}" class="btn btn-warning">Edit</a>
+                            <a routerLink="/companymaster/change/{{ companyMaster.id }}" class="btn btn-warning">Edit</a>
                             <span> | </span>
                             <a (click)="toggleVerifyDelete()" class="btn btn-danger">Delete</a>
                             <span *ngIf="verifyDelete">

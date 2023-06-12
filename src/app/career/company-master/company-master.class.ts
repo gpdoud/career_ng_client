@@ -11,11 +11,11 @@ export class CompanyMaster {
     contactName: string | null = null;
     contactPhone: string | null = null;
     contactRole: string | null = null;
-    codingRoles: boolean | null = null;
-    itbaRoles: boolean | null = null;
-    securityRoles: boolean | null = null;
-    blendedRoles: boolean | null = null;
-    virtualRoles: boolean | null = null;
+    codingRoles: boolean = false;
+    itbaRoles: boolean = false;
+    securityRoles: boolean = false;
+    blendedRoles: boolean = false;
+    virtualRoles: boolean = false;
     active: boolean = true;
     created: string = (new Date()).toISOString().substring(0, 10)
     updated: string | null = null;

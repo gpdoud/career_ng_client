@@ -28,7 +28,7 @@ export class CompanyMasterCreateComponent {
     this.cmsvc.create(this.companyMaster).subscribe({
       next: (res) => {
         console.debug("CompanyMaster Created!");
-        this.router.navigateByUrl("/user/list");
+        this.router.navigateByUrl("/companymaster/list");
       },
       error: (err) => console.error(err)
     });
