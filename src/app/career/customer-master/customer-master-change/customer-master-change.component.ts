@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-customer-master-change',
-  templateUrl: './customer-master-change.component.html',
-  styleUrls: ['./customer-master-change.component.css']
+  templateUrl: '../customer-master-maint.component.html',
+  styleUrls: ['../customer-master-maint.component.css']
 })
 export class CustomerMasterChangeComponent {
 

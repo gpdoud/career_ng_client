@@ -1,7 +1,7 @@
 export class CustomerMaster {
     id: number = 0;
     code: string = '';
-    companyName: string = '';
+    name: string = '';
     address: string | null = null;
     city: string | null = null;
     stateCode: string | null = null;
@@ -14,8 +14,8 @@ export class CustomerMaster {
     codingRoles: boolean | null = null;
     itbaRoles: boolean | null = null;
     securityRoles: boolean | null = null;
-    virtualRoles: boolean | null = null;
     blendedRoles: boolean | null = null;
+    virtualRoles: boolean | null = null;
     active: boolean = true;
     created: string = (new Date()).toISOString().substring(0, 10)
     updated: string | null = null;

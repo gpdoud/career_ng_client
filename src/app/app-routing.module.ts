@@ -7,6 +7,12 @@ const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 
   { path: 'login', component: x.UserLoginComponent},
+
+  { path: 'customermaster/list', component: x.CustomerMasterListComponent},
+  { path: 'customermaster/create', component: x.CustomerMasterCreateComponent},
+  { path: 'customermaster/detail/:id', component: x.CustomerMasterDetailComponent},
+  { path: 'customermaster/change/:id', component: x.CustomerMasterChangeComponent},
+  
   { path: 'user/list', component: x.UserListComponent},
   { path: 'user/create', component: x.UserCreateComponent},
   { path: 'user/detail/:id', component: x.UserDetailComponent},
