@@ -35,7 +35,7 @@ export class CompanyMasterDetailComponent {
     this.cmsvc.remove(this.companyMaster.id).subscribe({
       next: (res) => {
         console.debug("CompanyMaster Removed!");
-        this.router.navigateByUrl("/customermaster/list");
+        this.router.navigateByUrl("/companymaster/list");
       },
       error: (err) => console.error(err)
     });
