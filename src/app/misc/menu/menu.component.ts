@@ -13,6 +13,7 @@ export class MenuComponent {
     new Menu("User", "/user/list"),
     new Menu("Company Master", "/companymaster/list"),
     new Menu("Help", "/help"),
+    new Menu("Revisions", "/revision"),
     new Menu("Login", "/login")
   ];
   userDisplay: string = '[]';

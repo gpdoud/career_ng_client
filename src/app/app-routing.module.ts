@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import * as x from './career/index.exports';
+import { RevisionComponent } from './misc/revision/revision.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'user/change/:id', component: x.UserChangeComponent},
 
   { path: 'help', component: x.HelpComponent},
+  { path: 'revision', component: RevisionComponent},
   
   { path: '**', component: x.E404Component}
 ];

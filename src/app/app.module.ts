@@ -13,6 +13,7 @@ import { SortPipe } from './misc/pipes/sort.pipe';
 import { HeaderComponent } from './misc/components/header/header.component';
 import { FooterComponent } from './misc/components/footer/footer.component';
 import { PageTitleComponent } from './misc/components/page-title/page-title.component';
+import { RevisionComponent } from './misc/revision/revision.component';
 
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
@@ -32,7 +33,8 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     HeaderComponent,
     FooterComponent,
     PageTitleComponent,
-    x.HelpComponent
+    x.HelpComponent,
+    RevisionComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,
