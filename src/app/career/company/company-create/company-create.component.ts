@@ -4,6 +4,7 @@ import { SystemService } from 'src/app/misc/services/system.service';
 import { UserService } from '../../user/user.service';
 import { Company } from '../company.class';
 import { CompanyService } from '../company.service';
+import { User } from '../../user/user.class';
 
 @Component({
   selector: 'app-company-create',
@@ -15,6 +16,8 @@ export class CompanyCreateComponent {
   pageTitle = "Company Create";
   readonly: boolean = false;
   company: Company = new Company();
+  users!: User[];
+
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -40,6 +43,14 @@ export class CompanyCreateComponent {
     if(this.sys.loggedInUser !== null) {
       this.company.userId = this.sys.loggedInUser.id;
     }
+    this.usrsvc.list().subscribe({
+      next: (res) => {
+        console.debug("Users", res);
+        this.users = res as User[];
+      },
+      error: (err) => console.error(err)
+    });
+
   }
 
   verifyDelete(): void { }

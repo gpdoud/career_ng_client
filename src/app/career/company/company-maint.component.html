@@ -55,6 +55,14 @@
                         <td><input [(ngModel)]="company.contactRole" name="contactRole" [readonly]="readonly"></td>
                     </tr>
                     <tr>
+                        <td>Student:</td>
+                        <td>
+                            <select [(ngModel)]="company.userId" name="userId" [disabled]="readonly">
+                                <option *ngFor="let u of users" value="{{ u.id }}">{{ u.firstname }} {{ u.lastname }}</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Active:</td>
                         <td><input [(ngModel)]="company.active" type="checkbox" name="active" [readonly]="readonly"></td>
                     </tr>

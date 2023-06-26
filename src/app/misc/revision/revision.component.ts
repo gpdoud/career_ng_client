@@ -11,6 +11,15 @@ export class RevisionComponent {
 
   revisions = [
     { 
+      revision: "0.3", releaseDate: "Jun 26, 2023",
+      changes: [
+        "Added the Company table",
+        "Display student owner of company only if user is an admin",
+        "Student login to the Company list; admins login to the user list",
+        "Inactive students cannot log in."
+      ]
+    },
+    { 
       revision: "0.2", releaseDate: "Jun 14, 2023",
       changes: [
         "Added the CompanyMaster table",

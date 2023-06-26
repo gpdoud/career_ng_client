@@ -4,6 +4,7 @@ import { SystemService } from 'src/app/misc/services/system.service';
 import { UserService } from '../../user/user.service';
 import { Company } from '../company.class';
 import { CompanyService } from '../company.service';
+import { User } from '../../user/user.class';
 
 @Component({
   selector: 'app-company-change',
@@ -15,6 +16,8 @@ export class CompanyChangeComponent {
   pageTitle = "Company Change";
   readonly: boolean = false;
   company!: Company;
+  users!: User[];
+
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -41,6 +44,14 @@ export class CompanyChangeComponent {
   remove(): void {}
 
   ngOnInit(): void {
+    this.usrsvc.list().subscribe({
+      next: (res) => {
+        console.debug("Users", res);
+        this.users = res as User[];
+      },
+      error: (err) => console.error(err)
+    });
+
     let id = this.route.snapshot.params["id"];
     this.csvc.get(id).subscribe({
       next: (res) => {

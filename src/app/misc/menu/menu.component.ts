@@ -9,13 +9,16 @@ import { SystemService } from '../services/system.service';
 })
 export class MenuComponent {
 
-  menus: Menu[] = [
+  menus: Menu[] = [];
+  studentMenus: Menu[] = [
     new Menu("Company", "/company/list"),
-    new Menu("User", "/user/list"),
-    new Menu("Company Master", "/companymaster/list"),
     new Menu("Help", "/help"),
     new Menu("Revisions", "/revision"),
     new Menu("Login", "/login")
+  ];
+  adminMenus: Menu[] = [
+    new Menu("User", "/user/list"),
+    new Menu("Company Master", "/companymaster/list"),
   ];
   userDisplay: string = '[]';
 
@@ -30,8 +33,10 @@ export class MenuComponent {
       this.userDisplay = `[${this.sys.loggedInUser.lastname}]`;
       if(this.sys.isAdmin) {
         this.userDisplay = `${this.userDisplay}(A)`;
+        this.menus = this.menus.concat(this.adminMenus);
       }
     }
+    this.menus = this.menus.concat(this.studentMenus);
   }
   
 }

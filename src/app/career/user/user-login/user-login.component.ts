@@ -26,7 +26,7 @@ export class UserLoginComponent {
 
   encrypt(): void {
     this.encryptedPassword = this.usrsvc.encryptString(this.password);
-    this.password = "******************";
+    this.password = "";
   }
 
   login(): void {
@@ -37,11 +37,15 @@ export class UserLoginComponent {
       next: (res) => {
         console.debug("Login successful!");
         this.sys.loggedInUser = res;
-        this.router.navigateByUrl("/user/list");
+        if(this.sys.isAdmin) {
+          this.router.navigateByUrl("/user/list");
+        } else {
+          this.router.navigateByUrl("/company/list");
+        }
       },
       error: (err) =>  {
         if(err.status === 404) {
-          this.message = "404 - Not Found";
+          this.message = "User Not Found or not active!";
         } else {
           console.error(err); 
         }
