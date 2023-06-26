@@ -8,12 +8,8 @@ import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as x from './career/index.exports';
 import { RouterModule } from '@angular/router';
-import { UserSearchPipe } from './career/user/user-search.pipe';
-import { SortPipe } from './misc/pipes/sort.pipe';
-import { HeaderComponent } from './misc/components/header/header.component';
-import { FooterComponent } from './misc/components/footer/footer.component';
-import { PageTitleComponent } from './misc/components/page-title/page-title.component';
-import { RevisionComponent } from './misc/revision/revision.component';
+
+
 
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
@@ -21,20 +17,25 @@ export const startupServiceFactory = (appinit: AppInitService) => {
 
 @NgModule({
   declarations: [
+    AppComponent,
+
+    x.CompanySearchPipe,
+    x.CompanyListComponent,x.CompanyDetailComponent,x.CompanyChangeComponent,x.CompanyCreateComponent,
+
     x.CompanyMasterListComponent, x.CompanyMasterDetailComponent,
     x.CompanyMasterCreateComponent, x.CompanyMasterChangeComponent,
     x.CompanyMasterSearchPipe,
     
-    x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,x.UserCreateComponent,x.UserChangeComponent,
+    x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,
+    x.UserCreateComponent,x.UserChangeComponent,x.UserSearchPipe,
+    
     x.E404Component, x.BoolDisplayPipe,x.MenuComponent,
-    AppComponent,
-    UserSearchPipe,
-    SortPipe,
-    HeaderComponent,
-    FooterComponent,
-    PageTitleComponent,
+    x.SortPipe,
+    x.HeaderComponent,
+    x.FooterComponent,
+    x.PageTitleComponent,
     x.HelpComponent,
-    RevisionComponent
+    x.RevisionComponent,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,

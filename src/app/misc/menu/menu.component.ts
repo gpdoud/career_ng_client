@@ -10,6 +10,7 @@ import { SystemService } from '../services/system.service';
 export class MenuComponent {
 
   menus: Menu[] = [
+    new Menu("Company", "/company/list"),
     new Menu("User", "/user/list"),
     new Menu("Company Master", "/companymaster/list"),
     new Menu("Help", "/help"),
