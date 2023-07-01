@@ -11,8 +11,8 @@ import { SystemService } from 'src/app/misc/services/system.service';
 })
 export class UserLoginComponent {
 
-  email: string = '';
-  password: string = '';
+  email: string = 'gdoud@maxtrain.com';
+  password: string = 'maxpass';
   encryptedPassword: string = '';
   message: string = '';
 
@@ -38,9 +38,9 @@ export class UserLoginComponent {
         console.debug("Login successful!");
         this.sys.loggedInUser = res;
         if(this.sys.isAdmin) {
-          this.router.navigateByUrl("/user/list");
+          this.router.navigateByUrl("/opportunity/list");
         } else {
-          this.router.navigateByUrl("/company/list");
+          this.router.navigateByUrl("/opportunity/list");
         }
       },
       error: (err) =>  {
@@ -51,6 +51,10 @@ export class UserLoginComponent {
         }
       }
     });
+  }
+
+  ngOnInit(): void {
+    console.warn("WARNING: Preload admin login information!!!");
   }
 
 }
