@@ -10,6 +10,7 @@ export class Company {
     zip: string = '';
     phone: string = '';
     email: string = '';
+    website: string = '';
     contactName: string = '';
     contactPhone: string = '';
     contactRole: string = '';

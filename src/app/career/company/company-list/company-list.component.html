@@ -20,6 +20,7 @@
                     <td><a (click)="sortCol('zip')">Zip</a></td>
                     <td><a (click)="sortCol('phone')">Phone</a></td>
                     <td><a (click)="sortCol('email')">Email</a></td>
+                    <td><a (click)="sortCol('website')">Website</a></td>
                     <td><a (click)="sortCol('contactName')">Contact</a></td>
                     <td><a (click)="sortCol('contactPhone')">Phone</a></td>
                     <td *ngIf="userIsAdmin"><a (click)="sortCol('userLastname')">User</a></td>
@@ -37,6 +38,7 @@
                     <td>{{ c.zip }}</td>
                     <td>{{ c.phone }}</td>
                     <td>{{ c.email }}</td>
+                    <td>{{ c.website }}</td>
                     <td>{{ c.contactName }}</td>
                     <td>{{ c.contactPhone }}</td>
                     <td *ngIf="userIsAdmin">{{ c.userLastname }}</td>
