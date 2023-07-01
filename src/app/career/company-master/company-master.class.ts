@@ -8,6 +8,7 @@ export class CompanyMaster {
     zip: string | null = null;
     phone: string | null = null;
     email: string | null = null;
+    website: string | null = null;
     contactName: string | null = null;
     contactPhone: string | null = null;
     contactRole: string | null = null;

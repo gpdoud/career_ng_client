@@ -23,6 +23,7 @@ export class CompanyMasterSearchPipe implements PipeTransform {
         (cm.zip !== null && cm.zip.toString().toLowerCase().includes(search)) ||
         (cm.phone !== null && cm.phone.toString().toLowerCase().includes(search)) ||
         (cm.email !== null && cm.email.toString().toLowerCase().includes(search)) ||
+        (cm.website !== null && cm.website.toString().toLowerCase().includes(search)) ||
         (cm.contactName !== null && cm.contactName.toString().toLowerCase().includes(search)) ||
         (cm.contactPhone !== null && cm.contactPhone.toString().toLowerCase().includes(search)) ||
         (cm.contactRole !== null && cm.contactRole.toString().toLowerCase().includes(search)) ||
