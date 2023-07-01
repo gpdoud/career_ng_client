@@ -1,6 +1,6 @@
 <span>
     <span class="page-title fw-bold">{{ pageTitle }}</span>
-    <span *ngIf="userIsAdmin && routerLink">
+    <span *ngIf="alwaysDisplay || userIsAdmin && routerLink">
         <span> | </span>
         <a routerLink="{{ routerLink }}" >Create New</a>
     </span>

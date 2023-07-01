@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppInitService } from './app-init.service';
 import * as x from './career/index.exports';
 import { RouterModule } from '@angular/router';
+import { OpportunitySearchPipe } from './career/opportunity/opportunity-search.pipe';
 
 
 
@@ -26,6 +27,9 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.CompanyMasterCreateComponent, x.CompanyMasterChangeComponent,
     x.CompanyMasterSearchPipe,
     
+    x.OpportunityListComponent,x.OpportunityDetailComponent,
+    x.OpportunityCreateComponent,x.OpportunityChangeComponent,
+
     x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,
     x.UserCreateComponent,x.UserChangeComponent,x.UserSearchPipe,
     
@@ -36,6 +40,7 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.PageTitleComponent,
     x.HelpComponent,
     x.RevisionComponent,
+    OpportunitySearchPipe,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,

@@ -19,6 +19,11 @@ const routes: Routes = [
   { path: 'companymaster/detail/:id', component: x.CompanyMasterDetailComponent},
   { path: 'companymaster/change/:id', component: x.CompanyMasterChangeComponent},
   
+  { path: 'opportunity/list', component: x.OpportunityListComponent},
+  { path: 'opportunity/create', component: x.OpportunityCreateComponent},
+  { path: 'opportunity/detail/:id', component: x.OpportunityDetailComponent},
+  { path: 'opportunity/change/:id', component: x.OpportunityChangeComponent},
+  
   { path: 'user/list', component: x.UserListComponent},
   { path: 'user/create', component: x.UserCreateComponent},
   { path: 'user/detail/:id', component: x.UserDetailComponent},

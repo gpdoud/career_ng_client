@@ -12,6 +12,7 @@ export class MenuComponent {
   menus: Menu[] = [];
   studentMenus: Menu[] = [
     new Menu("Company", "/company/list"),
+    new Menu("Opportunity", "/opportunity/list"),
     new Menu("Help", "/help"),
     new Menu("Revisions", "/revision"),
     new Menu("Login", "/login")

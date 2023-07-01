@@ -11,6 +11,11 @@ export { CompanyMasterCreateComponent } from '../career/company-master/company-m
 export { CompanyMasterChangeComponent } from '../career/company-master/company-master-change/company-master-change.component'
 export { CompanyMasterSearchPipe } from '../career/company-master/company-master-search.pipe';
 
+export { OpportunityListComponent } from '../career/opportunity/opportunity-list/opportunity-list.component';
+export { OpportunityDetailComponent } from '../career/opportunity/opportunity-detail/opportunity-detail.component';
+export { OpportunityCreateComponent } from '../career/opportunity/opportunity-create/opportunity-create.component';
+export { OpportunityChangeComponent } from '../career/opportunity/opportunity-change/opportunity-change.component';
+
 
 export { UserLoginComponent } from '../career/user/user-login/user-login.component';
 export { UserListComponent} from '../career/user/user-list/user-list.component';

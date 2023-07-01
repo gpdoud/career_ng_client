@@ -9,6 +9,7 @@ import { SystemService } from '../../services/system.service';
 export class PageTitleComponent {
   @Input() pageTitle: string = "Page Title";
   @Input() routerLink: string = "";
+  @Input() alwaysDisplay: boolean = false;
 
   get userIsAdmin() { return this.sys.isAdmin; }
 
