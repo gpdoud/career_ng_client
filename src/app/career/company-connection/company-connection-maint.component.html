@@ -1,0 +1,49 @@
+<div>
+    <header></header>
+    
+    <app-menu></app-menu>
+    
+    <app-page-title [pageTitle]="pageTitle">
+    </app-page-title>
+
+    <main>
+        <form>
+            <table class="table table-striped table-sm" *ngIf="companyConnection">
+                <tbody>
+                    <tr>
+                        <td>Id:</td>
+                        <td><input [ngModel]="companyConnection.id" name="id" readonly ></td>
+                    </tr>
+                    <tr>
+                        <td>Connection:</td>
+                        <td><input [(ngModel)]="companyConnection.connection" name="connection" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Active:</td>
+                        <td><input [(ngModel)]="companyConnection.active" type="checkbox" name="active" [readonly]="readonly"></td>
+                    </tr>
+                    <tr *ngIf="!readonly && userIsAdmin">
+                        <td colspan="2">
+                            <button (click)="save()" class="btn btn-primary">Save</button>
+                        </td>
+                    </tr>
+                    <tr *ngIf="readonly">
+                        <td colspan="2">
+                            <a routerLink="/companyconnection/change/{{ companyConnection.id }}" class="btn btn-warning">Change</a>
+                            <span> | </span>
+                            <a (click)="toggleVerifyDelete()" class="btn btn-danger">Remove</a>
+                            <span *ngIf="verifyDelete">
+                                <span> | </span>
+                                <a (click)="remove()" class="btn btn-danger">Verify Remove</a>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+
+    <footer>
+        <span>Career Management System (CMS)</span>
+    </footer>
+</div>

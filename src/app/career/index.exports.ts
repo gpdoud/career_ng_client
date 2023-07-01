@@ -5,6 +5,11 @@ export { CompanyDetailComponent } from './company/company-detail/company-detail.
 export { CompanyCreateComponent } from '../career/company/company-create/company-create.component';
 export { CompanyChangeComponent } from '../career/company/company-change/company-change.component';
 
+export { CompanyConnectionListComponent } from './company-connection/company-connection-list/company-connection-list.component';
+export { CompanyConnectionSearchPipe } from '../career/company-connection/company-connection-search.pipe';
+export { CompanyConnectionCreateComponent } from '../career/company-connection/company-connection-create/company-connection-create.component';
+export { CompanyConnectionChangeComponent } from '../career/company-connection/company-connection-change/company-connection-change.component';
+
 export { CompanyMasterListComponent } from '../career/company-master/company-master-list/company-master-list.component'
 export { CompanyMasterDetailComponent } from '../career/company-master/company-master-detail/company-master-detail.component'
 export { CompanyMasterCreateComponent } from '../career/company-master/company-master-create/company-master-create.component'
@@ -15,6 +20,7 @@ export { OpportunityListComponent } from '../career/opportunity/opportunity-list
 export { OpportunityDetailComponent } from '../career/opportunity/opportunity-detail/opportunity-detail.component';
 export { OpportunityCreateComponent } from '../career/opportunity/opportunity-create/opportunity-create.component';
 export { OpportunityChangeComponent } from '../career/opportunity/opportunity-change/opportunity-change.component';
+export { OpportunitySearchPipe } from '../career/opportunity/opportunity-search.pipe';
 
 
 export { UserLoginComponent } from '../career/user/user-login/user-login.component';
@@ -35,3 +41,4 @@ export { SortPipe } from '../misc/pipes/sort.pipe';
 export { MenuComponent } from '../misc/menu/menu.component';
 
 export { BoolDisplayPipe } from '../misc/pipes/bool-display.pipe';
+

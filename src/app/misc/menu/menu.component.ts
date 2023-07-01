@@ -19,7 +19,7 @@ export class MenuComponent {
   ];
   adminMenus: Menu[] = [
     new Menu("Comp Master", "/companymaster/list"),
-    new Menu("Comp Connect", "/companyconnection/maint"),
+    new Menu("Comp Connect", "/companyconnection/list"),
     new Menu("User", "/user/list"),
   ];
   userDisplay: string = '[]';

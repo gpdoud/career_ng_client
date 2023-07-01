@@ -14,6 +14,10 @@ const routes: Routes = [
   { path: 'company/detail/:id', component: x.CompanyDetailComponent},
   { path: 'company/change/:id', component: x.CompanyChangeComponent},
   
+  { path: 'companyconnection/list', component: x.CompanyConnectionListComponent},
+  { path: 'companyconnection/create', component: x.CompanyConnectionCreateComponent},
+  { path: 'companyconnection/change/:id', component: x.CompanyConnectionChangeComponent},
+  
   { path: 'companymaster/list', component: x.CompanyMasterListComponent},
   { path: 'companymaster/create', component: x.CompanyMasterCreateComponent},
   { path: 'companymaster/detail/:id', component: x.CompanyMasterDetailComponent},
