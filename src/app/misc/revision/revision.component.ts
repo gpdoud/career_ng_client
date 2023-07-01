@@ -11,6 +11,17 @@ export class RevisionComponent {
 
   revisions = [
     { 
+      revision: "0.4", releaseDate: "Jul 1, 2023",
+      changes: [
+        "Added the Opportunity table",
+        "Show Student name on opportunity if admin",
+        "Added the CompanyConnection table",
+        "Navigate to Opportunities after login",
+        "Added website to CompanyMaster and Company",
+        "Students can only assign their companies to opportunities"
+      ]
+    },
+    {
       revision: "0.3", releaseDate: "Jun 26, 2023",
       changes: [
         "Added the Company table",
