@@ -1,4 +1,9 @@
 
+export { ActivityTypeListComponent } from '../career/activity-type/activity-type-list/activity-type-list.component';
+export { ActivityTypeCreateComponent } from '../career/activity-type/activity-type-create/activity-type-create.component';
+export { ActivityTypeChangeComponent } from '../career/activity-type/activity-type-change/activity-type-change.component';
+export { ActivityTypeSearchPipe } from '../career/activity-type/activity-type-search.pipe';
+
 export { CompanySearchPipe } from '../career/company/company-search.pipe';
 export { CompanyListComponent } from '../career/company/company-list/company-list.component';
 export { CompanyDetailComponent } from './company/company-detail/company-detail.component';

@@ -9,6 +9,10 @@ const routes: Routes = [
 
   { path: 'login', component: x.UserLoginComponent},
 
+  { path: 'activitytype/list', component: x.ActivityTypeListComponent},
+  { path: 'activitytype/create', component: x.ActivityTypeCreateComponent},
+  { path: 'activitytype/change/:id', component: x.ActivityTypeChangeComponent},
+
   { path: 'company/list', component: x.CompanyListComponent},
   { path: 'company/create', component: x.CompanyCreateComponent},
   { path: 'company/detail/:id', component: x.CompanyDetailComponent},

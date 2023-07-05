@@ -6,6 +6,13 @@ form {
     /* text-align: center; */
     border: 2px solid silver;
 }
+main {
+    margin: 10px;
+}
+button.link {
+    font-weight: bold;
+    text-decoration: none;
+}
 input, select {
     border-radius: 7px;
 }
@@ -13,10 +20,14 @@ a {
     text-decoration: none;
     cursor: pointer;
     font-weight: bold;
+    color: blue;
 }
 .sort-headers a {
     color: #0d6efd !important;
 }
 .no-borders {
     border-width: 0;
+}
+.actions {
+    width: 150px;
 }

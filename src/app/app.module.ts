@@ -44,7 +44,11 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.PageTitleComponent,
     x.HelpComponent,
     x.RevisionComponent,
-    x.OpportunitySearchPipe
+    x.OpportunitySearchPipe,
+    x.ActivityTypeListComponent,
+    x.ActivityTypeSearchPipe,
+    x.ActivityTypeCreateComponent,
+    x.ActivityTypeChangeComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,
