@@ -1,3 +1,4 @@
+import { Activity } from "../activity/activity.class";
 import { CompanyConnection } from "../company-connection/company-connection.class";
 import { Company } from "../company/company.class";
 import { User } from "../user/user.class";
@@ -17,6 +18,7 @@ export class Opportunity {
     companyConnection: CompanyConnection | null = null;
     companyConnectionName: string = '';
     notes: string = '';
+    activities: Activity[] = [];
 
     active: boolean = true;
     created: string = (new Date).toISOString().substring(0,10);

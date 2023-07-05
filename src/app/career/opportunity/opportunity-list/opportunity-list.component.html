@@ -34,6 +34,7 @@
                     <td *ngIf="userIsAdmin">{{ o.username }}</td>
                     <td>{{ o.active | boolDisplay }}</td>
                     <td>
+                        <a routerLink="/opportunity/activity/{{ o.id }}">Act</a> | 
                         <a routerLink="/opportunity/detail/{{ o.id }}">Det</a>
                         <span>
                             <span> | </span>
