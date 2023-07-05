@@ -19,13 +19,17 @@ export const startupServiceFactory = (appinit: AppInitService) => {
   declarations: [
     AppComponent,
 
+    x.ActivityListComponent,x.ActivitySearchPipe,
+
+    x.ActivityTypeListComponent,x.ActivityTypeCreateComponent,
+    x.ActivityTypeChangeComponent,x.ActivityTypeSearchPipe,
+    x.ActivityCreateComponent,x.ActivityChangeComponent,
+
     x.CompanySearchPipe,
     x.CompanyListComponent,x.CompanyDetailComponent,x.CompanyChangeComponent,x.CompanyCreateComponent,
 
-    x.CompanyConnectionListComponent,
-    x.CompanyConnectionCreateComponent,
-    x.CompanyConnectionChangeComponent,
-    x.CompanyConnectionSearchPipe,
+    x.CompanyConnectionListComponent,x.CompanyConnectionCreateComponent,
+    x.CompanyConnectionChangeComponent,x.CompanyConnectionSearchPipe,
 
     x.CompanyMasterListComponent, x.CompanyMasterDetailComponent,
     x.CompanyMasterCreateComponent, x.CompanyMasterChangeComponent,
@@ -33,6 +37,7 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     
     x.OpportunityListComponent,x.OpportunityDetailComponent,
     x.OpportunityCreateComponent,x.OpportunityChangeComponent,
+    x.OpportunityActivityComponent,x.OpportunitySearchPipe,
 
     x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,
     x.UserCreateComponent,x.UserChangeComponent,x.UserSearchPipe,
@@ -44,11 +49,6 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.PageTitleComponent,
     x.HelpComponent,
     x.RevisionComponent,
-    x.OpportunitySearchPipe,
-    x.ActivityTypeListComponent,
-    x.ActivityTypeSearchPipe,
-    x.ActivityTypeCreateComponent,
-    x.ActivityTypeChangeComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, RouterModule,

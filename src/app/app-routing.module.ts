@@ -9,6 +9,10 @@ const routes: Routes = [
 
   { path: 'login', component: x.UserLoginComponent},
 
+  { path: 'activity/list', component: x.ActivityListComponent},
+  { path: 'activity/create/:oppid', component: x.ActivityCreateComponent},
+  { path: 'activity/change/:id', component: x.ActivityChangeComponent},
+
   { path: 'activitytype/list', component: x.ActivityTypeListComponent},
   { path: 'activitytype/create', component: x.ActivityTypeCreateComponent},
   { path: 'activitytype/change/:id', component: x.ActivityTypeChangeComponent},
@@ -31,6 +35,7 @@ const routes: Routes = [
   { path: 'opportunity/create', component: x.OpportunityCreateComponent},
   { path: 'opportunity/detail/:id', component: x.OpportunityDetailComponent},
   { path: 'opportunity/change/:id', component: x.OpportunityChangeComponent},
+  { path: 'opportunity/activity/:id', component: x.OpportunityActivityComponent},
   
   { path: 'user/list', component: x.UserListComponent},
   { path: 'user/create', component: x.UserCreateComponent},

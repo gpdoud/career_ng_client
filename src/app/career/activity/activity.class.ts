@@ -7,8 +7,9 @@ export class Activity {
     opportunityId: number = 0;
     opportunity: Opportunity | null = null;
     activityTypeId: number = 0;
-    activtyType: ActivityType | null = null;
-    date: string = '';
+    activityType: ActivityType | null = null;
+    activityTypeName: string = '';
+    date: string = (new Date).toISOString().substring(0,10);
     notes: string = '';
 
     active: boolean = true;

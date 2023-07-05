@@ -1,3 +1,7 @@
+export { ActivityListComponent } from '../career/activity/activity-list/activity-list.component';
+export { ActivityCreateComponent } from '../career/activity/activity-create/activity-create.component';
+export { ActivityChangeComponent } from '../career/activity/activity-change/activity-change.component';
+export { ActivitySearchPipe } from '../career/activity/activity-search.pipe';
 
 export { ActivityTypeListComponent } from '../career/activity-type/activity-type-list/activity-type-list.component';
 export { ActivityTypeCreateComponent } from '../career/activity-type/activity-type-create/activity-type-create.component';
@@ -25,6 +29,8 @@ export { OpportunityListComponent } from '../career/opportunity/opportunity-list
 export { OpportunityDetailComponent } from '../career/opportunity/opportunity-detail/opportunity-detail.component';
 export { OpportunityCreateComponent } from '../career/opportunity/opportunity-create/opportunity-create.component';
 export { OpportunityChangeComponent } from '../career/opportunity/opportunity-change/opportunity-change.component';
+export { OpportunityActivityComponent } from '../career/opportunity/opportunity-activity/opportunity-activity.component';
+
 export { OpportunitySearchPipe } from '../career/opportunity/opportunity-search.pipe';
 
 
