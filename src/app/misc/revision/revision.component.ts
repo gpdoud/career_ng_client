@@ -18,7 +18,9 @@ export class RevisionComponent {
         "Added the CompanyConnection table",
         "Navigate to Opportunities after login",
         "Added website to CompanyMaster and Company",
-        "Students can only assign their companies to opportunities"
+        "Students can only assign their companies to opportunities",
+        "Activities added to opportunities",
+        "Added preliminary help page"
       ]
     },
     {
