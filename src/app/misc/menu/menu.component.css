@@ -1,7 +1,12 @@
+.menu {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.9em;
+}
 .left, .right {
     display: inline-block;
     background-color: #454545;
     color: silver;
+
 }
 .left {
     width: 80%;
