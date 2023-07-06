@@ -27,14 +27,13 @@
                     <td>{{ h.active | boolDisplay }}</td>
                     <td class="actions">
                         <span>
-                            <button (click)="detail(h.id)" class="btn btn-link link">Det</button> |
-                            <button (click)="change(h.id)" class="btn btn-link link">Chg</button> |
-                            <button (click)="remove(h.id)" class="btn btn-link link text-danger">Rem</button>
-                            <span *ngIf="showRemoveVerify && helpId == h.id">
-                                |
-                                <button (click)="verifyRemove(h.id)" class="btn btn-link link text-danger">Verify</button>
-
-
+                            <button (click)="detail(h.id)" class="btn btn-link link">Det</button>
+                            <span *ngIf="userIsAdmin"> 
+                                | <button (click)="change(h.id)" class="btn btn-link link">Chg</button> 
+                                | <button (click)="remove(h.id)" class="btn btn-link link text-danger">Rem</button>
+                                <span *ngIf="showRemoveVerify && helpId == h.id">
+                                    | <button (click)="verifyRemove(h.id)" class="btn btn-link link text-danger">Verify</button>
+                                </span>
                             </span>
                         </span>
                     </td>

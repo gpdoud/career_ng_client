@@ -8,7 +8,7 @@
 
     <main>
         <form>
-            <table class="table table-striped table-sm" *ngIf="help">
+            <table class="table table-sm" *ngIf="help">
                 <tbody>
                     <tr>
                         <td>Id:</td>
@@ -16,11 +16,11 @@
                     </tr>
                     <tr>
                         <td>Topic:</td>
-                        <td><textarea [(ngModel)]="help.topic" name="topic" [disabled]="readonly" rows="3" cols="80"></textarea></td>
+                        <td><textarea autosize [(ngModel)]="help.topic" name="topic" [disabled]="readonly" rows="5" cols="80"></textarea></td>
                     </tr>
                     <tr>
                         <td>Response:</td>
-                        <td><textarea [(ngModel)]="help.response" name="response" [disabled]="readonly" rows="3" cols="80"></textarea></td>
+                        <td><textarea autosize [(ngModel)]="help.response" name="response" [disabled]="readonly" rows="10" cols="80"></textarea></td>
                     </tr>
                     <tr>
                         <td>Active:</td>
