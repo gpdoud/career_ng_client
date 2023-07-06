@@ -38,12 +38,12 @@
                         <td>Active:</td>
                         <td><input [(ngModel)]="activity.active" type="checkbox" name="active" [readonly]="readonly"></td>
                     </tr>
-                    <tr *ngIf="!readonly && userIsAdmin">
+                    <tr *ngIf="!readonly">
                         <td colspan="2">
                             <button (click)="save()" class="btn btn-primary">Save</button>
                         </td>
                     </tr>
-                    <tr *ngIf="readonly && userIsAdmin">
+                    <tr *ngIf="readonly">
                         <td colspan="2">
                             <a routerLink="/activitytype/change/{{ activity.id }}" class="btn btn-warning">Edit</a>
                             <span> | </span>
