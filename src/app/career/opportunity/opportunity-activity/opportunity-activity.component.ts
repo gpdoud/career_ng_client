@@ -65,7 +65,7 @@ export class OpportunityActivityComponent {
         let yyyy = at.date.substring(0,4);
         let mm = at.date.substring(5,7);
         let dd = at.date.substring(8,10);
-        at.date = `${mm}/${dd}/${yyyy}`;
+        at.dateMDY = `${mm}/${dd}/${yyyy}`;
       }
     }
   }

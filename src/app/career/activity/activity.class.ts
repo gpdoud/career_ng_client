@@ -10,6 +10,7 @@ export class Activity {
     activityType: ActivityType | null = null;
     activityTypeName: string = '';
     date: string = (new Date).toISOString().substring(0,10);
+    dateMDY: string = '';
     notes: string = '';
 
     active: boolean = true;

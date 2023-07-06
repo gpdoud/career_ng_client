@@ -18,6 +18,7 @@
                     <td><a>Notes</a></td>
                     <td *ngIf="userIsAdmin"><a>User</a></td>
                     <td><a>Active</a></td>
+                    <td>Actions</td>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +31,9 @@
                     <td>{{ opportunity.notes }}</td>
                     <td *ngIf="userIsAdmin">{{ opportunity.username }}</td>
                     <td>{{ opportunity.active | boolDisplay }}</td>
+                    <td>
+                        <a routerLink="/opportunity/change/{{ opportunity.id }}">Chg</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -48,9 +52,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let a of opportunity.activities">
+                <tr *ngFor="let a of opportunity.activities | sort:'date'">
                     <td>{{ a.id }}</td>
-                    <td>{{ a.date }}</td>
+                    <td>{{ a.dateMDY }}</td>
                     <td>{{ a.activityTypeName }}</td>
                     <td class="a-note">{{ a.notes }}</td>
                     <td>{{ a.active | boolDisplay }}</td>
