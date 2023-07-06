@@ -58,6 +58,12 @@
                         <span>
                             <button (click)="change(a.id)" class="btn btn-link link">Chg</button>
                         </span>
+                        <span>
+                            | <button (click)="remove(a.id)" class="btn btn-link text-danger link">Del</button>
+                        </span>
+                        <span *ngIf="showVerify && idToDelete == a.id">
+                            | <button (click)="verifyRemove(a.id)" class="btn btn-link text-danger link">Verify</button>
+                        </span>
                     </td>
                 </tr>
             </tbody>

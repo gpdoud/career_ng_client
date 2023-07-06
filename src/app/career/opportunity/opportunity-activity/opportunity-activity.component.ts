@@ -34,8 +34,20 @@ export class OpportunityActivityComponent {
   change(activityId: number): void {
     this.router.navigateByUrl(`/activity/change/${activityId}`);
   }
-  remove(): void {
-
+  showVerify: boolean = false;
+  idToDelete: number = -1;
+  remove(id: number): void {
+    this.showVerify = !this.showVerify;
+    this.idToDelete = id;
+  }
+  verifyRemove(id: number): void {
+    this.asvc.remove(id).subscribe({
+      next: (res) => {
+        console.debug("Activity Removed!");
+        this.refresh();
+      },
+      error: (err) => console.error(err)
+    });
   }
 
   fillRelatedData(o: Opportunity) {
@@ -58,18 +70,22 @@ export class OpportunityActivityComponent {
     }
   }
 
-  ngOnInit(): void {
-    this.sys.chkLogin();
+  refresh(): void {
     let id = this.route.snapshot.params["id"];
     this.opsvc.get(id).subscribe({
       next: (res) => {
         this.fillRelatedData(res);
         console.debug("Opportunity", res);
-
+        
         this.opportunity = res as Opportunity;
       },
       error: (err) => console.error(err)
     });
+  }
+  
+  ngOnInit(): void {
+    this.sys.chkLogin();
+    this.refresh();
   }
 
 
