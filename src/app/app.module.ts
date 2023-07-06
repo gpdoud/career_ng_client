@@ -35,6 +35,10 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.CompanyMasterCreateComponent, x.CompanyMasterChangeComponent,
     x.CompanyMasterSearchPipe,
     
+    x.HelpListComponent,x.HelpDetailComponent,
+    x.HelpCreateComponent,x.HelpChangeComponent,
+    x.HelpSearchPipe,
+
     x.OpportunityListComponent,x.OpportunityDetailComponent,
     x.OpportunityCreateComponent,x.OpportunityChangeComponent,
     x.OpportunityActivityComponent,x.OpportunitySearchPipe,
@@ -47,7 +51,6 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.HeaderComponent,
     x.FooterComponent,
     x.PageTitleComponent,
-    x.HelpComponent,
     x.RevisionComponent,
   ],
   imports: [

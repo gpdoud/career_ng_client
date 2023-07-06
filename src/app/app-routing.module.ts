@@ -31,6 +31,11 @@ const routes: Routes = [
   { path: 'companymaster/detail/:id', component: x.CompanyMasterDetailComponent},
   { path: 'companymaster/change/:id', component: x.CompanyMasterChangeComponent},
   
+  { path: 'help/list', component: x.HelpListComponent},
+  { path: 'help/create', component: x.HelpCreateComponent},
+  { path: 'help/detail/:id', component: x.HelpDetailComponent},
+  { path: 'help/change/:id', component: x.HelpChangeComponent},
+  
   { path: 'opportunity/list', component: x.OpportunityListComponent},
   { path: 'opportunity/create', component: x.OpportunityCreateComponent},
   { path: 'opportunity/detail/:id', component: x.OpportunityDetailComponent},
@@ -42,7 +47,6 @@ const routes: Routes = [
   { path: 'user/detail/:id', component: x.UserDetailComponent},
   { path: 'user/change/:id', component: x.UserChangeComponent},
 
-  { path: 'help', component: x.HelpComponent},
   { path: 'revision', component: RevisionComponent},
   
   { path: '**', component: x.E404Component}
