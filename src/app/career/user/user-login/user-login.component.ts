@@ -11,8 +11,10 @@ import { SystemService } from 'src/app/misc/services/system.service';
 })
 export class UserLoginComponent {
 
-  email: string = 'gdoud@maxtrain.com';
-  password: string = 'maxpass';
+  email: string = '';
+  password: string = '';
+//  email: string = 'gdoud@maxtrain.com';
+//  password: string = 'maxpass';
   encryptedPassword: string = '';
   message: string = '';
 
