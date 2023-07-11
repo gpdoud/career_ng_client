@@ -58,7 +58,7 @@
                     <td>{{ a.activityTypeName }}</td>
                     <td class="a-note">{{ a.notes }}</td>
                     <td>{{ a.active | boolDisplay }}</td>
-                    <td class="actions">
+                    <td class="actions" *ngIf="!a.activityType.adminOnly || (userIsAdmin && a.activityType.adminOnly)">
                         <span>
                             <button (click)="change(a.id)" class="btn btn-link link">Chg</button>
                         </span>
