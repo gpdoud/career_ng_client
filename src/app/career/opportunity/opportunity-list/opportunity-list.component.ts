@@ -22,7 +22,7 @@ export class OpportunityListComponent {
   ) { }
 
   searchCriteria: string = ''
-  sortColumn: string = 'id'
+  sortColumn: string = 'username'
   sortAsc: boolean = true;
   sortCol(col: string): void {
     if (this.sortColumn === col) {
