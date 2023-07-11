@@ -14,7 +14,7 @@ import { ActivityTypeService } from '../../activity-type/activity-type.service';
 })
 export class ActivityChangeComponent {
 
-  pageTitle = "Company Master Change";
+  pageTitle = "Activity Change";
   readonly: boolean = false;
   activity!: Activity;
   activityTypes: ActivityType[] = [];
@@ -45,10 +45,24 @@ export class ActivityChangeComponent {
   toggleVerifyDelete(): void {}
   remove(): void {}
 
+  filterAdminOnly(activityTypes: ActivityType[]): ActivityType[] {
+    if(this.sys.isAdmin) {
+      return activityTypes;
+    }
+    let selected: ActivityType[] = [];
+    for(let at of activityTypes) {
+      if(!at.adminOnly) {
+        selected.push(at);
+      }
+    }
+    return selected;
+  }
+
   ngOnInit(): void {
     this.sys.chkLogin();
     this.atsvc.list().subscribe({
       next: (res) => {
+        res = this.filterAdminOnly(res);
         console.debug("ActivityTypes:", res);
         this.activityTypes = res;
       },
