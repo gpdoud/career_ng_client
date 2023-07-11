@@ -22,6 +22,10 @@
                         <td>Description:</td>
                         <td><input [(ngModel)]="activityType.description" name="description" [readonly]="readonly"></td>
                     </tr>
+                    <tr *ngIf="userIsAdmin">
+                        <td>Admin Only:</td>
+                        <td><input [(ngModel)]="activityType.adminOnly" type="checkbox" name="adminOnly" [readonly]="readonly"></td>
+                    </tr>
                     <tr>
                         <td>Active:</td>
                         <td><input [(ngModel)]="activityType.active" type="checkbox" name="active" [readonly]="readonly"></td>
