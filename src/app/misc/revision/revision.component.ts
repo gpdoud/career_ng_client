@@ -11,6 +11,18 @@ export class RevisionComponent {
 
   revisions = [
     { 
+      revision: "0.5", releaseDate: "Jul 11, 2023",
+      changes: [
+        "Fixed search and sort on the opportunity list",
+        "Set default sort to username on opportunity list",
+        "Added AdminOnly boolean to ActivityTypes",
+        "Limited maintenance on Activities with ActivityTypes where AdmonOnly",
+        "Added textarea to rounded corners style",
+        "Opportuities not active are hidden from list by default",
+        "Checkbox to display inactive oportunities on list"
+      ]
+    },
+    { 
       revision: "0.4", releaseDate: "Jul 1, 2023",
       changes: [
         "Added the Opportunity table",

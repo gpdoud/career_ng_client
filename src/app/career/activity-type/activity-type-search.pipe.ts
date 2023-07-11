@@ -17,6 +17,7 @@ export class ActivityTypeSearchPipe implements PipeTransform {
         at.id.toString().toLowerCase().includes(search) ||
         at.type.toString().toLowerCase().includes(search) ||
         at.description.toString().toLowerCase().includes(search) ||
+        at.adminOnly.toString().toLowerCase().includes(search) ||
         at.active.toString().toLowerCase().includes(search)
       ) {
         selected.push(at);

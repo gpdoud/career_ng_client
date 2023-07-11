@@ -15,6 +15,7 @@
                     <td><a (click)="sortCol('id')">Id</a></td>
                     <td><a (click)="sortCol('type')">Type</a></td>
                     <td><a (click)="sortCol('description')">Description</a></td>
+                    <td><a (click)="sortCol('adminOnly')">Admin Only</a></td>
                     <td><a (click)="sortCol('active')">Active</a></td>
                     <td>Actions</td>
                 </tr>
@@ -24,6 +25,7 @@
                     <td>{{ at.id }}</td>
                     <td>{{ at.type }}</td>
                     <td>{{ at.description }}</td>
+                    <td>{{ at.adminOnly | boolDisplay }}</td>
                     <td>{{ at.active | boolDisplay }}</td>
                     <td class="actions">
                         <span>

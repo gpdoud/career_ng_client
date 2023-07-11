@@ -42,10 +42,25 @@ export class ActivityCreateComponent {
     });
   }
 
+  filterAdminOnly(activityTypes: ActivityType[]): ActivityType[] {
+    if(this.sys.isAdmin) {
+      return activityTypes;
+    }
+    let selected: ActivityType[] = [];
+    for(let at of activityTypes) {
+      if(!at.adminOnly) {
+        selected.push(at);
+      }
+    }
+    return selected;
+  }
+
   ngOnInit(): void {
+    this.sys.chkLogin();
     this.activity.opportunityId = +this.route.snapshot.params["oppid"];
     this.atsvc.list().subscribe({
       next: (res) => {
+        res = this.filterAdminOnly(res);
         console.debug("ActivityTypes:", res);
         this.activityTypes = res;
       },

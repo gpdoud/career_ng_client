@@ -17,7 +17,8 @@ export class OpportunitySearchPipe implements PipeTransform {
         o.id.toString().toLowerCase().includes(search) ||
         o.companyName.toString().toLowerCase().includes(search) ||
         o.rank.toString().toLowerCase().includes(search) ||
-        o.companyConnectionName.toString().toLowerCase().includes(search) ||
+        (typeof o.companyConnectionName !== "undefined" && o.companyConnectionName.toString().toLowerCase().includes(search)) ||
+        (typeof o.username !== "undefined" && o.username.toString().toLowerCase().includes(search)) ||
         o.notes.toString().toLowerCase().includes(search) ||
         o.active.toString().toLowerCase().includes(search)
       ) {

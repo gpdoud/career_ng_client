@@ -18,7 +18,7 @@
                         <td>Type:</td>
                         <td>
                             <select [(ngModel)]="activity.activityTypeId" name="activityTypeId" >
-                                <option *ngFor="let actt of activityTypes" value="{{ actt.id }}">{{ actt.id }}:{{ actt.type }}</option>
+                                <option *ngFor="let actt of activityTypes" value="{{ actt.id }}">{{ actt.type }}</option>
                             </select>
                         </td>
                     </tr>
@@ -30,7 +30,7 @@
                         <td>Notes:</td>
                         <td>
                             <textarea [(ngModel)]="activity.notes" name="notes" [readonly]="readonly"
-                                        rows="1" cols="40">
+                                        rows="5" cols="80">
                             </textarea>
                         </td>
                     </tr>

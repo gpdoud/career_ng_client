@@ -6,6 +6,9 @@
     <app-page-title [pageTitle]="pageTitle" [routerLink]="createRouterLink" [alwaysDisplay]="true">
     </app-page-title>
     <span> | </span>
+    <span> Show inactive </span>
+    <input [(ngModel)]="showInactive" type="checkbox" (change)="onCheckboxChange($event)">
+    <span> | </span>
     <input [(ngModel)]="searchCriteria" class="no-borders" placeholder="Search">
 
     <main>
