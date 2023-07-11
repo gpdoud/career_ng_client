@@ -38,6 +38,9 @@ export class OpportunityListComponent {
       if (typeof o.company !== "undefined" && o.company !== null) {
         o.companyName = o.company.name;
       }
+      if(typeof o.companyConnection !== "undefined" && o.companyConnection !== null) {
+        o.companyConnectionName = o.companyConnection.connection;
+      }
       if (typeof o.user !== "undefined" && o.user !== null) {
         o.username = o.user.lastname;
       }
