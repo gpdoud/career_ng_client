@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { SystemService } from 'src/app/misc/services/system.service';
 import { CompanyMaster } from './company-master.class';
+import { Company } from '../company/company.class';
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,9 @@ export class CompanyMasterService {
   }
   create(CompanyMaster: CompanyMaster): Observable<CompanyMaster> {
     return this.http.post(`${this.url}`, CompanyMaster) as Observable<CompanyMaster>;
+  }
+  addCompany(company: Company): Observable<CompanyMaster> {
+    return this.http.post(`${this.url}/company`, company) as Observable<CompanyMaster>;
   }
   change(CompanyMaster: CompanyMaster): Observable<any> {
     return this.http.put(`${this.url}/${CompanyMaster.id}`, CompanyMaster) as Observable<any>;

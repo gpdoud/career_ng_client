@@ -4,6 +4,7 @@ import { UserService } from '../../user/user.service';
 import { Company } from '../company.class';
 import { CompanyService } from '../company.service';
 import { Observable } from 'rxjs';
+import { CompanyMasterService } from '../../company-master/company-master.service';
 
 @Component({
   selector: 'app-company-list',
@@ -19,7 +20,8 @@ export class CompanyListComponent {
 
   constructor(
     private sys: SystemService,
-    private cmsvc: CompanyService,
+    private csvc: CompanyService,
+    private cmsvc: CompanyMasterService,
     private usrsvc: UserService
   ) {}
 
@@ -42,15 +44,25 @@ export class CompanyListComponent {
     }
   }
 
+  addToCompanyMaster(company: Company): void {
+    this.cmsvc.addCompany(company).subscribe({
+      next: (res) => {
+        console.debug("Company added to CompanyMaster successfully!");
+        alert("Company added to CompanyMaster successfully!");
+      },
+      error: (err) => console.error(err)
+    });
+  }
+
   ngOnInit(): void {
     this.sys.chkLogin();
     if(this.sys.loggedInUser === null) return;
     let observable!: Observable<Company[]>;
     if(this.userIsAdmin) {
-      observable = this.cmsvc.list();
+      observable = this.csvc.list();
     } else {
       let userId = this.sys.loggedInUser.id;
-      observable = this.cmsvc.listByStudent(userId);
+      observable = this.csvc.listByStudent(userId);
     }
     observable.subscribe({
       next: (res) => {

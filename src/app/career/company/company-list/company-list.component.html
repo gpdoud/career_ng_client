@@ -49,6 +49,10 @@
                             <span> | </span>
                             <a routerLink="/company/change/{{ c.id }}">Chg</a>
                         </span>
+                        <span *ngIf="userIsAdmin">
+                            <span> | </span>
+                            <button (click)="addToCompanyMaster( c )" class="btn btn-link button-link">A2CM</button>
+                        </span>
                     </td>
                 </tr>
             </tbody>
