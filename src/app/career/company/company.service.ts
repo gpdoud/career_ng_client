@@ -30,6 +30,9 @@ export class CompanyService {
   create(Company: Company): Observable<Company> {
     return this.http.post(`${this.url}`, Company) as Observable<Company>;
   }
+  assign(userId: number, cmId: number): Observable<Company> {
+    return this.http.post(`${this.url}/assign/${userId}/${cmId}`, Company) as Observable<Company>;
+  }
   change(Company: Company): Observable<any> {
     return this.http.put(`${this.url}/${Company.id}`, Company) as Observable<any>;
   }

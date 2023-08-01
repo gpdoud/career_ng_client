@@ -1,0 +1,45 @@
+<div>
+    <app-header></app-header>
+    
+    <app-menu></app-menu>
+
+    <app-page-title [pageTitle]="pageTitle">
+    </app-page-title>
+
+    <main>
+        <table class="table table-sm" *ngIf="cm">
+            <thead>
+                <tr class="sort-headers">
+                    <td>Company</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ cm.name }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm">
+            <thead>
+                <tr class="sort-headers">
+                    <td>Students</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let s of students">
+                    <td>
+                        <input [(ngModel)]="s.selected" type="checkbox">
+                        {{ s.firstname }} {{ s.lastname }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="assign()" class="btn btn-primary">Assign</button>
+        </div>
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

@@ -23,6 +23,7 @@ export { CompanyMasterListComponent } from '../career/company-master/company-mas
 export { CompanyMasterDetailComponent } from '../career/company-master/company-master-detail/company-master-detail.component'
 export { CompanyMasterCreateComponent } from '../career/company-master/company-master-create/company-master-create.component'
 export { CompanyMasterChangeComponent } from '../career/company-master/company-master-change/company-master-change.component'
+export { CompanyMasterAssignComponent } from '../career/company-master/company-master-assign/company-master-assign.component';
 export { CompanyMasterSearchPipe } from '../career/company-master/company-master-search.pipe';
 
 export { HelpDetailComponent } from '../career/help/help-detail/help-detail.component';
