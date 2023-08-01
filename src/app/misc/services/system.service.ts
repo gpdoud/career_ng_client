@@ -11,9 +11,9 @@ export class SystemService {
   productName = "Career Management System";
   author = "Annette Ballard & Greg Doud";
   major: number = 0;
-  minor: number = 5;
+  minor: number = 6;
   patch: number = 0;
-  releaseDate = "July 11, 2023"
+  releaseDate = "July 14, 2023"
   state: string = "BETA";
 
   get version() { 

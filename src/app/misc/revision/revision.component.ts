@@ -11,6 +11,13 @@ export class RevisionComponent {
 
   revisions = [
     { 
+      revision: "0.6", releaseDate: "Jul 14, 2023",
+      changes: [
+        "Added 'Return to list' to Activity Create and Change",
+        "Changed the login dialog width and padding"
+      ]
+    },
+    { 
       revision: "0.5", releaseDate: "Jul 11, 2023",
       changes: [
         "Fixed search and sort on the opportunity list",
