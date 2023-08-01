@@ -1,0 +1,14 @@
+.button-link {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: bold;
+    color: rgb(0,0,255);
+    text-decoration: none;
+    margin-bottom: 3px;
+}
+tr {
+    margin: 0;
+    padding: 0;
+
+}
