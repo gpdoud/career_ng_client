@@ -14,10 +14,6 @@
                 <tr class="sort-headers">
                     <td><a (click)="sortCol('id')">Id</a></td>
                     <td><a (click)="sortCol('name')">Name</a></td>
-                    <td><a (click)="sortCol('address')">Address</a></td>
-                    <td><a (click)="sortCol('city')">City</a></td>
-                    <td><a (click)="sortCol('stateCode')">State</a></td>
-                    <td><a (click)="sortCol('zip')">Zip</a></td>
                     <td><a (click)="sortCol('phone')">Phone</a></td>
                     <td><a (click)="sortCol('email')">Email</a></td>
                     <td><a (click)="sortCol('website')">Website</a></td>
@@ -32,10 +28,6 @@
                 <tr *ngFor="let c of companies | companySearch:searchCriteria | sort:sortColumn:sortAsc">
                     <td>{{ c.id }}</td>
                     <td>{{ c.name }}</td>
-                    <td>{{ c.address }}</td>
-                    <td>{{ c.city }}</td>
-                    <td>{{ c.stateCode }}</td>
-                    <td>{{ c.zip }}</td>
                     <td>{{ c.phone }}</td>
                     <td>{{ c.email }}</td>
                     <td>{{ c.website }}</td>
