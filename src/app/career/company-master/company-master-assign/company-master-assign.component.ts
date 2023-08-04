@@ -30,6 +30,13 @@ export class CompanyMasterAssignComponent {
     private router: Router
   ) {}
 
+  toggleCheckAll(): void {
+    console.debug("toggleCheckAll", "checkAll:", this.checkAll);
+    for(let s of this.students) {
+      s.selected = this.checkAll;
+    }
+  }
+
   assign(): void {
     for(let s of this.students) {
       if(s.selected)
@@ -45,6 +52,7 @@ export class CompanyMasterAssignComponent {
   }
 
   ngOnInit(): void {
+    this.sys.chkLogin();
     let id = +this.route.snapshot.params["id"];
     this.cmsvc.get(id).subscribe({
       next: (res) => {

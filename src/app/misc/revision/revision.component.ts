@@ -11,6 +11,13 @@ export class RevisionComponent {
 
   revisions = [
     { 
+      revision: "1.0", releaseDate: "August 4, 2023",
+      changes: [
+        "Added ability to assign company master to students company",
+        "Added ability to copy student company to company master"
+      ]
+    },
+    { 
       revision: "0.6", releaseDate: "Jul 14, 2023",
       changes: [
         "Added 'Return to list' to Activity Create and Change",
