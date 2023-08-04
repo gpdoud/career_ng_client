@@ -10,11 +10,11 @@ export class SystemService {
 
   productName = "Career Management System";
   author = "Annette Ballard & Greg Doud";
-  major: number = 0;
-  minor: number = 6;
+  major: number = 1;
+  minor: number = 0;
   patch: number = 0;
-  releaseDate = "July 14, 2023"
-  state: string = "BETA";
+  releaseDate = "August 4, 2023"
+  state: string = "PROD";
 
   get version() { 
     let ver =  `${this.major}.${this.minor}`;

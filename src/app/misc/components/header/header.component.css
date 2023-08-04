@@ -1,8 +1,8 @@
 #app-header {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: silver;
-    background-color: darkblue;
+    color: white;
+    background-color: red
 }
 #appName {
     font-size: 2em;

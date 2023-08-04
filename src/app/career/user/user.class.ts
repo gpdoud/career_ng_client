@@ -9,4 +9,6 @@ export class User {
     active: boolean = true;
     created: string = (new Date).toISOString().substring(0,10);
     updated: string | null = null;
+
+    selected: boolean | null = null;
 }

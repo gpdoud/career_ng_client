@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: 'companymaster/create', component: x.CompanyMasterCreateComponent},
   { path: 'companymaster/detail/:id', component: x.CompanyMasterDetailComponent},
   { path: 'companymaster/change/:id', component: x.CompanyMasterChangeComponent},
+  { path: 'companymaster/assign/:id', component: x.CompanyMasterAssignComponent},
   
   { path: 'help/list', component: x.HelpListComponent},
   { path: 'help/create', component: x.HelpCreateComponent},

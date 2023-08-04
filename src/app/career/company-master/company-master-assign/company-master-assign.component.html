@@ -1,0 +1,63 @@
+<div>
+    <app-header></app-header>
+    
+    <app-menu></app-menu>
+
+    <app-page-title [pageTitle]="pageTitle">
+    </app-page-title>
+
+    <main>
+        <p>
+            <br>
+            To assign the selected company to any or all students, check the box next to the student name,
+            then click the ASSIGN button. Click the check box next to "Student" to check or uncheck check
+            all the students.
+        </p>
+        <table class="table table-sm" *ngIf="cm">
+            <thead>
+                <tr class="sort-headers">
+                    <td><a href=#>Company</a></td>
+                    <td><a href=#>Address</a></td>
+                    <td><a href=#>Phone</a></td>
+                    <td><a href=#>Email</a></td>
+                    <td><a href=#>Website</a></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ cm.name }}</td>
+                    <td>{{ cm.address }}, {{ cm.city }}, {{ cm.stateCode }} {{ cm.zip }}</td>
+                    <td>{{ cm.phone }}</td>
+                    <td>{{ cm.email }}</td>
+                    <td>{{ cm.website }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr class="sort-headers">
+                    <td><input [(ngModel)]="checkAll" (change)="toggleCheckAll()" type="checkbox"></td>
+                    <td><a href=#> Student</a></td>
+                    <td><a href=#> Phone</a></td>
+                    <td><a href=#> Email</a></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let s of students">
+                    <td><input [(ngModel)]="s.selected" type="checkbox"></td>
+                    <td>{{ s.firstname }} {{ s.lastname }}</td>
+                    <td>{{ s.phone }}</td>
+                    <td>{{ s.email }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div>
+            <button (click)="assign()" class="btn btn-primary">Assign</button>
+        </div>
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

@@ -33,6 +33,7 @@ export const startupServiceFactory = (appinit: AppInitService) => {
 
     x.CompanyMasterListComponent, x.CompanyMasterDetailComponent,
     x.CompanyMasterCreateComponent, x.CompanyMasterChangeComponent,
+    x.CompanyMasterAssignComponent,
     x.CompanyMasterSearchPipe,
     
     x.HelpListComponent,x.HelpDetailComponent,
