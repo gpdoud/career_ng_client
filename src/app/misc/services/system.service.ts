@@ -8,12 +8,12 @@ import { User } from 'src/app/career/user/user.class';
 })
 export class SystemService {
 
-  productName = "Career Management System";
+  productName = "Career Management System (CMS)";
   author = "Annette Ballard & Greg Doud";
   major: number = 1;
-  minor: number = 0;
+  minor: number = 1;
   patch: number = 0;
-  releaseDate = "August 4, 2023"
+  releaseDate = "August 7, 2023"
   state: string = "PROD";
 
   get version() { 

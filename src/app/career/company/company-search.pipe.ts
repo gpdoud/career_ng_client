@@ -6,16 +6,17 @@ import { Company } from './company.class';
 })
 export class CompanySearchPipe implements PipeTransform {
 
-  transform(companyMasters: Company[], search: string):  Company[] {
-    if(typeof companyMasters === "undefined" || companyMasters === null) {
-      return companyMasters;
+  transform(companies: Company[], search: string):  Company[] {
+    if(typeof companies === "undefined" || companies === null) {
+      return companies;
     }
     search = search.toLowerCase();
     let selected: Company[] = []
-    for(let cm of companyMasters) {
+    for(let cm of companies) {
       if(
         cm.id.toString().toLowerCase().includes(search) ||
         cm.name.toString().toLowerCase().includes(search) ||
+        (cm.userLastname !== null && cm.userLastname.toString().toLowerCase().includes(search)) ||
         (cm.address !== null && cm.address.toString().toLowerCase().includes(search)) ||
         (cm.city !== null && cm.city.toString().toLowerCase().includes(search)) ||
         (cm.stateCode !== null && cm.stateCode.toString().toLowerCase().includes(search)) ||

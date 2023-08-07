@@ -11,6 +11,12 @@ export class RevisionComponent {
 
   revisions = [
     { 
+      revision: "1.1", releaseDate: "August 7, 2023",
+      changes: [
+        "Added ability to search company by user lastname"
+      ]
+    },
+    { 
       revision: "1.0", releaseDate: "August 4, 2023",
       changes: [
         "Added ability to assign company master to students company",
