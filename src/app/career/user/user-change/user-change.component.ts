@@ -14,6 +14,7 @@ export class UserChangeComponent {
   pageTitle = "User Change";
   readonly: boolean = false;
   user!: User;
+  password: string = "";
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -24,7 +25,7 @@ export class UserChangeComponent {
   ) {}
 
   encrypt(): void {
-    this.user.password = this.usrsvc.encryptString(this.user.password);
+    this.user.password = this.usrsvc.encryptString(this.password);
   }
 
   save(): void {
@@ -49,6 +50,7 @@ export class UserChangeComponent {
       next: (res) => {
         console.debug("User", res);
         this.user = res as User;
+        this.password = this.user.password;
       },
       error: (err) => console.error(err)
     });

@@ -27,12 +27,14 @@
                         <td><input [(ngModel)]="user.email" name="email" [readonly]="readonly"></td>
                     </tr>
                     <tr>
-                        <td>Password:</td>
-                        <td><input [(ngModel)]="user.password" type="password" name="password" [readonly]="readonly"></td>
-                    </tr>
-                    <tr>
                         <td>Phone:</td>
                         <td><input [(ngModel)]="user.phone" name="phone" [readonly]="readonly"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td>
+                            <input [(ngModel)]="password" type="password" name="password" [readonly]="readonly">
+                        </td>
                     </tr>
                     <tr>
                         <td>Admin:</td>

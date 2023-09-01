@@ -14,6 +14,7 @@ export class UserCreateComponent {
   pageTitle = "User Create";
   readonly: boolean = false;
   user: User = new User();
+  password: string = "";
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -23,7 +24,7 @@ export class UserCreateComponent {
   ) {}
 
   encrypt(): void {
-    this.user.password = this.usrsvc.encryptString(this.user.password);
+    this.user.password = this.usrsvc.encryptString(this.password);
   }
 
   save(): void {

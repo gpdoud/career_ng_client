@@ -14,6 +14,7 @@ export class UserDetailComponent {
   readonly: boolean = true;
   verifyDelete: boolean = false;
   user!: User;
+  password: string = "";
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -45,6 +46,7 @@ export class UserDetailComponent {
       next: (res) => {
         console.debug("User", res);
         this.user = res as User;
+        this.password = this.user.password;
       },
       error: (err) => console.error(err)
     });
