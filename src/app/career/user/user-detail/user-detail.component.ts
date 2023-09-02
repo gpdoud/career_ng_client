@@ -24,6 +24,9 @@ export class UserDetailComponent {
     private router: Router
   ) {}
 
+  generateDefaultPassword(): void {    
+  }
+
   toggleVerifyDelete(): void { 
     this.verifyDelete = !this.verifyDelete
   }
@@ -46,7 +49,6 @@ export class UserDetailComponent {
       next: (res) => {
         console.debug("User", res);
         this.user = res as User;
-        this.password = this.user.password;
       },
       error: (err) => console.error(err)
     });

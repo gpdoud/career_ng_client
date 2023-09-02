@@ -28,12 +28,13 @@
                     </tr>
                     <tr>
                         <td>Phone:</td>
-                        <td><input [(ngModel)]="user.phone" name="phone" [readonly]="readonly"></td>
+                        <td><input [(ngModel)]="user.phone" name="phone" [readonly]="readonly" (blur)="generateDefaultPassword()"></td>
                     </tr>
                     <tr>
                         <td>Password:</td>
                         <td>
-                            <input [(ngModel)]="password" type="password" name="password" [readonly]="readonly">
+                            <input *ngIf="userIsAdmin" [(ngModel)]="password" type="text" name="password" [readonly]="readonly">
+                            <input *ngIf="!userIsAdmin" [(ngModel)]="password" type="password" name="password" [readonly]="readonly">
                         </td>
                     </tr>
                     <tr>

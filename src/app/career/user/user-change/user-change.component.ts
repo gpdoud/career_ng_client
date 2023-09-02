@@ -24,6 +24,10 @@ export class UserChangeComponent {
     private router: Router
   ) {}
 
+  generateDefaultPassword(): void {    
+  }
+
+
   encrypt(): void {
     this.user.password = this.usrsvc.encryptString(this.password);
   }
@@ -50,7 +54,6 @@ export class UserChangeComponent {
       next: (res) => {
         console.debug("User", res);
         this.user = res as User;
-        this.password = this.user.password;
       },
       error: (err) => console.error(err)
     });
