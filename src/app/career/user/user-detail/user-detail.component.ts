@@ -14,6 +14,7 @@ export class UserDetailComponent {
   readonly: boolean = true;
   verifyDelete: boolean = false;
   user!: User;
+  password: string = "";
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -22,6 +23,9 @@ export class UserDetailComponent {
     private route: ActivatedRoute,
     private router: Router
   ) {}
+
+  generateDefaultPassword(): void {    
+  }
 
   toggleVerifyDelete(): void { 
     this.verifyDelete = !this.verifyDelete

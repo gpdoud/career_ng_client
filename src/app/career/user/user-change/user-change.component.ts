@@ -14,6 +14,7 @@ export class UserChangeComponent {
   pageTitle = "User Change";
   readonly: boolean = false;
   user!: User;
+  password: string = "";
   get userIsAdmin() { return this.sys.isAdmin; }
 
   constructor(
@@ -23,8 +24,12 @@ export class UserChangeComponent {
     private router: Router
   ) {}
 
+  generateDefaultPassword(): void {    
+  }
+
+
   encrypt(): void {
-    this.user.password = this.usrsvc.encryptString(this.user.password);
+    this.user.password = this.usrsvc.encryptString(this.password);
   }
 
   save(): void {
