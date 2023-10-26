@@ -1,0 +1,41 @@
+<table class="table table-sm" *ngIf="opportunity">
+    <thead>
+        <tr>
+            <td class="sep" colspan="6"></td>
+        </tr>
+        <tr>
+            <td>Id</td>
+            <td>Description</td>
+            <td>Company</td>
+            <td>Connection</td>
+            <td>Rank</td>
+            <td>Created</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{ opportunity.id }}</td>
+            <td>{{ opportunity.description }}</td>
+            <td>{{ opportunity.company?.name }}</td>
+            <td>{{ opportunity.companyConnection?.connection }}</td>
+            <td>{{ opportunity.rank }}</td>
+            <td>{{ opportunity.created | date:'shortDate' }}</td>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-sm" *ngIf="opportunity.activities.length > 0">
+    <thead>
+        <tr>
+            <td class="date">Date</td>
+            <td class="type">Type</td>
+            <td class="notes">Notes</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let x of opportunity.activities">
+            <td>{{ x.date | date:'shortDate' }}</td>
+            <td>{{ x.activityType?.type }}</td>
+            <td>{{ x.notes }}</td>
+        </tr>
+    </tbody>
+</table>

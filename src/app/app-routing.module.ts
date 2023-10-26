@@ -43,6 +43,9 @@ const routes: Routes = [
   { path: 'opportunity/change/:id', component: x.OpportunityChangeComponent},
   { path: 'opportunity/activity/:id', component: x.OpportunityActivityComponent},
   
+  { path: 'report/list', component: x.ReportListComponent},
+  { path: 'report/oppbyuser', component: x.ReportOpportunitiesByUserComponent},
+  
   { path: 'user/list', component: x.UserListComponent},
   { path: 'user/create', component: x.UserCreateComponent},
   { path: 'user/detail/:id', component: x.UserDetailComponent},

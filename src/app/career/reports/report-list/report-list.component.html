@@ -1,0 +1,32 @@
+<div>
+    <app-header></app-header>
+    
+    <app-menu></app-menu>
+
+    <app-page-title [pageTitle]="pageTitle">
+    </app-page-title>
+    <span> | </span>
+    <input [(ngModel)]="searchCriteria" class="no-borders" placeholder="Search">
+
+    <main>
+        <table class="table table-striped table-sm">
+            <thead>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="link">
+                        <a routerLink="/report/oppbyuser">Opportunities by user</a>
+                    </td>
+                    <td>Opportunities by user displays a list of all the opportunities and all the 
+                        activities for each opportunity so that the career coach can review the status
+                        of the career search.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>
