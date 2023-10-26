@@ -11,7 +11,13 @@ export class RevisionComponent {
 
   revisions = [
     { 
-      revision: "1.2", releaseDate: "Septemerber 2, 2023",
+      revision: "1.3", releaseDate: "October 26, 2023",
+      changes: [
+        "Created opportunities for user report"
+      ]
+    },
+    { 
+      revision: "1.2", releaseDate: "September 2, 2023",
       changes: [
         "Generate password for new user and display to admins",
         "Increased menu font size"
