@@ -7,3 +7,11 @@
 .sep {
     border-top: 2px solid black;
 }
+thead td {
+    font-size: 0.9em;
+    font-style: italic;
+    text-decoration: underline;
+}
+thead td, tbody td {
+    padding: 2px 4px;
+}
