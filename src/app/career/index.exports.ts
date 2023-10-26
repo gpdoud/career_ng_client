@@ -39,6 +39,11 @@ export { OpportunityChangeComponent } from '../career/opportunity/opportunity-ch
 export { OpportunityActivityComponent } from '../career/opportunity/opportunity-activity/opportunity-activity.component';
 export { OpportunitySearchPipe } from '../career/opportunity/opportunity-search.pipe';
 
+export { ReportListComponent } from '../career/reports/report-list/report-list.component';
+export { ReportOpportunitiesByUserComponent } from '../career/reports/report-opportunities-by-user/report-opportunities-by-user.component';
+export { ReportOpportunityLineComponent } from '../career/reports/report-opportunity-line/report-opportunity-line.component';
+
+
 export { UserLoginComponent } from '../career/user/user-login/user-login.component';
 export { UserListComponent} from '../career/user/user-list/user-list.component';
 export { UserDetailComponent} from '../career/user/user-detail/user-detail.component';

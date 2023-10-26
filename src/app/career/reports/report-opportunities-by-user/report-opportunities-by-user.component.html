@@ -1,0 +1,35 @@
+<div>
+    <app-header></app-header>
+    
+    <app-menu></app-menu>
+
+    <app-page-title [pageTitle]="pageTitle">
+    </app-page-title>
+<!--     
+    <span> | </span>
+    <input [(ngModel)]="searchCriteria" class="no-borders" placeholder="Search">
+ -->
+    <main>
+        <table class="table table-sm">
+            <tbody>
+                <tr>
+                    <td>User</td>
+                    <td>
+                        <select [(ngModel)]="userId">
+                            <option *ngFor="let x of users" value="{{ x.id }}">{{ x.firstname }} {{ x.lastname }}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button (click)="generate()" class="btn btn-primary btn-sm">Generate</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <app-report-opportunity-line *ngFor="let x of opps" [opportunity]="x"></app-report-opportunity-line>
+        // opportunity component display
+    </main>
+
+    <footer>
+        <app-footer></app-footer>
+    </footer>
+</div>

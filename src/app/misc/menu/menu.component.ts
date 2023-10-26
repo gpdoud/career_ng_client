@@ -22,6 +22,7 @@ export class MenuComponent {
     new Menu("Comp Connect", "/companyconnection/list"),
     new Menu("ActivType", "/activitytype/list"),
     new Menu("User", "/user/list"),
+    new Menu("Reports", "/report/list")
   ];
   userDisplay: string = '[]';
 

@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 
 
 
+
 export const startupServiceFactory = (appinit: AppInitService) => {
   return () => appinit.getSettings();
 }
@@ -43,6 +44,8 @@ export const startupServiceFactory = (appinit: AppInitService) => {
     x.OpportunityListComponent,x.OpportunityDetailComponent,
     x.OpportunityCreateComponent,x.OpportunityChangeComponent,
     x.OpportunityActivityComponent,x.OpportunitySearchPipe,
+
+    x.ReportListComponent,x.ReportOpportunitiesByUserComponent,x.ReportOpportunityLineComponent,
 
     x.UserLoginComponent,x.UserListComponent,x.UserDetailComponent,
     x.UserCreateComponent,x.UserChangeComponent,x.UserSearchPipe,
